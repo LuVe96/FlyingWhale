@@ -19,5 +19,10 @@ public class ObjectScrolling : MonoBehaviour
     {
         //this.transform.position += new Vector3(speed * Time.deltaTime, 0f, 0f);
 
+        PlayerSpeed ps = PlayerSpeed.Slower;
+        if (GameManager.Instance.playerSpeed  == ps )
+        {
+            transform.position += new Vector3(ps.GetSpeed() * Time.deltaTime, 0, 0);
+        }
     }
 }

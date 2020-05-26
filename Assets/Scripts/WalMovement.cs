@@ -6,7 +6,7 @@ public class WalMovement : MonoBehaviour
 {
 
     public float velocty = 0.1f;
-    public Transform hunter;
+    //public Transform hunter;
 
     private bool isUpPressed = false;
     private bool isDownPressed = false;
@@ -55,14 +55,17 @@ public class WalMovement : MonoBehaviour
         Debug.Log("collision");
         if (other.gameObject.tag == "harpune" || other.gameObject.tag == "harpune(Clone)")
         {
-            //Debug.Log("collision with harpune");
+            //hunter.transform.position += new Vector3(1.5f, 0, 0);
 
-            hunter.transform.position += new Vector3(1.5f, 0, 0);
+            GameManager.Instance.PlayerGotSlower();
+
         }
 
         if (other.gameObject.tag == "netz" || other.gameObject.tag == "harpune(Clone)")
         {
             Debug.Log("Game over");
+            GameManager.Instance.PlayerIsDead();
+          
         }
 
     }

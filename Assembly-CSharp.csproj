@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HarpuneCreater.cs" />
     <Compile Include="Assets\Scripts\HarpuneShot.cs" />
+    <Compile Include="Assets\Scripts\HunterMovement.cs" />
     <Compile Include="Assets\Scripts\ObjectScrolling.cs" />
     <Compile Include="Assets\Scripts\RepeadableBackground.cs" />
     <Compile Include="Assets\Scripts\WalMovement.cs" />
