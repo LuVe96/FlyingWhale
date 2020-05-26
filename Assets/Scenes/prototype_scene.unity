@@ -163,9 +163,10 @@ GameObject:
   - component: {fileID: 95472935}
   - component: {fileID: 95472937}
   - component: {fileID: 95472936}
+  - component: {fileID: 95472938}
   m_Layer: 0
   m_Name: New SpriteShapeController (11)
-  m_TagString: Untagged
+  m_TagString: rainCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,8 +182,8 @@ Transform:
   m_LocalPosition: {x: 27.04, y: -1.9, z: 44.579765}
   m_LocalScale: {x: 0.5418172, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 10
+  m_Father: {fileID: 1857850188}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &95472936
 MonoBehaviour:
@@ -296,6 +297,78 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &95472938
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95472934}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000038146973, y: -0.00000023841858}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0
+--- !u!1 &201402485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 201402486}
+  m_Layer: 0
+  m_Name: SunnyClouds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &201402486
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201402485}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1686717812}
+  - {fileID: 1778131178}
+  - {fileID: 2039769664}
+  - {fileID: 936679633}
+  - {fileID: 1792943462}
+  - {fileID: 1885460062}
+  - {fileID: 1421854741}
+  - {fileID: 1550249053}
+  - {fileID: 1774607124}
+  - {fileID: 1433691581}
+  - {fileID: 992640156}
+  - {fileID: 1413417180}
+  - {fileID: 1823316846}
+  - {fileID: 1844331811}
+  - {fileID: 849640962}
+  - {fileID: 1460662857}
+  m_Father: {fileID: 846697957}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &241483279
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,9 +380,10 @@ GameObject:
   - component: {fileID: 241483280}
   - component: {fileID: 241483282}
   - component: {fileID: 241483281}
+  - component: {fileID: 241483283}
   m_Layer: 0
   m_Name: New SpriteShapeController (15)
-  m_TagString: Untagged
+  m_TagString: rainCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -322,11 +396,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 241483279}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.4, y: -7.73, z: 44.579765}
+  m_LocalPosition: {x: 28.400002, y: -7.73, z: 44.579765}
   m_LocalScale: {x: 0.5418172, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 14
+  m_Father: {fileID: 1857850188}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &241483281
 MonoBehaviour:
@@ -440,6 +514,32 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &241483283
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241483279}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000038146973, y: -0.00000023841858}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &241679721
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,9 +551,10 @@ GameObject:
   - component: {fileID: 241679722}
   - component: {fileID: 241679724}
   - component: {fileID: 241679723}
+  - component: {fileID: 241679725}
   m_Layer: 0
   m_Name: New SpriteShapeController (4)
-  m_TagString: Untagged
+  m_TagString: rainCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -469,8 +570,8 @@ Transform:
   m_LocalPosition: {x: 17.36, y: 0.26, z: 44.579765}
   m_LocalScale: {x: 1.0362254, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 3
+  m_Father: {fileID: 1857850188}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &241679723
 MonoBehaviour:
@@ -584,6 +685,32 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &241679725
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241679721}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.00000023841858}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &264413946
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,9 +722,10 @@ GameObject:
   - component: {fileID: 264413947}
   - component: {fileID: 264413949}
   - component: {fileID: 264413948}
+  - component: {fileID: 264413950}
   m_Layer: 0
   m_Name: New SpriteShapeController (7)
-  m_TagString: Untagged
+  m_TagString: rainCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -610,11 +738,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 264413946}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.47, y: -4.55, z: 44.579765}
+  m_LocalPosition: {x: 5.4700003, y: -4.55, z: 44.579765}
   m_LocalScale: {x: 0.5418172, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 6
+  m_Father: {fileID: 1857850188}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &264413948
 MonoBehaviour:
@@ -728,6 +856,32 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &264413950
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264413946}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0000019073486, y: -0.00000023841858}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &311522148
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,9 +1183,10 @@ GameObject:
   - component: {fileID: 356601732}
   - component: {fileID: 356601734}
   - component: {fileID: 356601733}
+  - component: {fileID: 356601735}
   m_Layer: 0
   m_Name: New SpriteShapeController (5)
-  m_TagString: Untagged
+  m_TagString: rainCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1044,11 +1199,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 356601731}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.01, y: -4.38, z: 44.579765}
+  m_LocalPosition: {x: 14.010001, y: -4.38, z: 44.579765}
   m_LocalScale: {x: 0.5418172, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 4
+  m_Father: {fileID: 1857850188}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &356601733
 MonoBehaviour:
@@ -1162,6 +1317,32 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &356601735
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356601731}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.00000071525574}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &452749607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,7 +1372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d7b02b454c19224d84c2c9a875c0d72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedPeriode: 1.5
+  speedPeriode: 0.1
 --- !u!4 &452749609
 Transform:
   m_ObjectHideFlags: 0
@@ -1424,9 +1605,10 @@ GameObject:
   - component: {fileID: 542017458}
   - component: {fileID: 542017460}
   - component: {fileID: 542017459}
+  - component: {fileID: 542017461}
   m_Layer: 0
   m_Name: New SpriteShapeController (23)
-  m_TagString: Untagged
+  m_TagString: rainCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1442,8 +1624,8 @@ Transform:
   m_LocalPosition: {x: -1.4299984, y: -3.54, z: 44.579765}
   m_LocalScale: {x: 0.5418172, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 22
+  m_Father: {fileID: 1857850188}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &542017459
 MonoBehaviour:
@@ -1557,6 +1739,32 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &542017461
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542017457}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000047683716, y: -0.00000023841858}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &692924261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1924,32 +2132,8 @@ Transform:
   m_LocalPosition: {x: 4.957387, y: -0.077336445, z: -44.579765}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1147220678}
-  - {fileID: 1227524476}
-  - {fileID: 1778131178}
-  - {fileID: 241679722}
-  - {fileID: 356601732}
-  - {fileID: 2039769664}
-  - {fileID: 264413947}
-  - {fileID: 936679633}
-  - {fileID: 1792943462}
-  - {fileID: 1885460062}
-  - {fileID: 95472935}
-  - {fileID: 1421854741}
-  - {fileID: 1550249053}
-  - {fileID: 1774607124}
-  - {fileID: 241483280}
-  - {fileID: 1433691581}
-  - {fileID: 1420058996}
-  - {fileID: 1626452403}
-  - {fileID: 992640156}
-  - {fileID: 1413417180}
-  - {fileID: 1823316846}
-  - {fileID: 1844331811}
-  - {fileID: 542017458}
-  - {fileID: 849640962}
-  - {fileID: 1460662857}
-  - {fileID: 1686717812}
+  - {fileID: 1857850188}
+  - {fileID: 201402486}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2011,9 +2195,10 @@ GameObject:
   - component: {fileID: 849640962}
   - component: {fileID: 849640964}
   - component: {fileID: 849640963}
+  - component: {fileID: 849640965}
   m_Layer: 0
   m_Name: New SpriteShapeController (24)
-  m_TagString: Untagged
+  m_TagString: sunnyCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2029,8 +2214,8 @@ Transform:
   m_LocalPosition: {x: -3.67, y: 4.22, z: 44.579765}
   m_LocalScale: {x: 1.0362254, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 23
+  m_Father: {fileID: 201402486}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &849640963
 MonoBehaviour:
@@ -2144,6 +2329,32 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &849640965
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849640961}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.00000023841858}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &900372552
 GameObject:
   m_ObjectHideFlags: 0
@@ -2213,9 +2424,10 @@ GameObject:
   - component: {fileID: 936679633}
   - component: {fileID: 936679635}
   - component: {fileID: 936679634}
+  - component: {fileID: 936679636}
   m_Layer: 0
   m_Name: New SpriteShapeController (8)
-  m_TagString: Untagged
+  m_TagString: sunnyCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2228,11 +2440,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936679632}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.31, y: 6.19, z: 44.579765}
+  m_LocalPosition: {x: 16.310001, y: 6.19, z: 44.579765}
   m_LocalScale: {x: 0.5418172, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 7
+  m_Father: {fileID: 201402486}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &936679634
 MonoBehaviour:
@@ -2346,6 +2558,32 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &936679636
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936679632}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000038146973, y: 0.00000071525574}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &992640155
 GameObject:
   m_ObjectHideFlags: 0
@@ -2357,9 +2595,10 @@ GameObject:
   - component: {fileID: 992640156}
   - component: {fileID: 992640158}
   - component: {fileID: 992640157}
+  - component: {fileID: 992640159}
   m_Layer: 0
   m_Name: New SpriteShapeController (19)
-  m_TagString: Untagged
+  m_TagString: sunnyCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2375,8 +2614,8 @@ Transform:
   m_LocalPosition: {x: 38.29, y: -6.53, z: 44.579765}
   m_LocalScale: {x: 0.5418172, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 18
+  m_Father: {fileID: 201402486}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &992640157
 MonoBehaviour:
@@ -2490,6 +2729,32 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &992640159
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992640155}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.00000023841858}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &1147220675
 GameObject:
   m_ObjectHideFlags: 0
@@ -2501,9 +2766,10 @@ GameObject:
   - component: {fileID: 1147220678}
   - component: {fileID: 1147220677}
   - component: {fileID: 1147220676}
+  - component: {fileID: 1147220679}
   m_Layer: 0
   m_Name: New SpriteShapeController (1)
-  m_TagString: Untagged
+  m_TagString: rainCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2631,9 +2897,35 @@ Transform:
   m_LocalPosition: {x: 10.292613, y: 6.047336, z: 44.579765}
   m_LocalScale: {x: 0.7179078, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 0
+  m_Father: {fileID: 1857850188}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1147220679
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147220675}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.00000023841858}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &1227524475
 GameObject:
   m_ObjectHideFlags: 0
@@ -2645,9 +2937,10 @@ GameObject:
   - component: {fileID: 1227524476}
   - component: {fileID: 1227524478}
   - component: {fileID: 1227524477}
+  - component: {fileID: 1227524479}
   m_Layer: 0
   m_Name: New SpriteShapeController (2)
-  m_TagString: Untagged
+  m_TagString: rainCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2663,8 +2956,8 @@ Transform:
   m_LocalPosition: {x: 9.83, y: -6.16, z: 44.579765}
   m_LocalScale: {x: 0.5418172, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 1
+  m_Father: {fileID: 1857850188}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1227524477
 MonoBehaviour:
@@ -2778,6 +3071,32 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &1227524479
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227524475}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.00000023841858}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &1413417179
 GameObject:
   m_ObjectHideFlags: 0
@@ -2789,9 +3108,10 @@ GameObject:
   - component: {fileID: 1413417180}
   - component: {fileID: 1413417182}
   - component: {fileID: 1413417181}
+  - component: {fileID: 1413417183}
   m_Layer: 0
   m_Name: New SpriteShapeController (20)
-  m_TagString: Untagged
+  m_TagString: sunnyCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2807,8 +3127,8 @@ Transform:
   m_LocalPosition: {x: -12.16, y: 6.19, z: 44.579765}
   m_LocalScale: {x: 0.5418172, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 19
+  m_Father: {fileID: 201402486}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1413417181
 MonoBehaviour:
@@ -2922,6 +3242,32 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &1413417183
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413417179}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.00000071525574}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &1420058995
 GameObject:
   m_ObjectHideFlags: 0
@@ -2933,9 +3279,10 @@ GameObject:
   - component: {fileID: 1420058996}
   - component: {fileID: 1420058998}
   - component: {fileID: 1420058997}
+  - component: {fileID: 1420058999}
   m_Layer: 0
   m_Name: New SpriteShapeController (17)
-  m_TagString: Untagged
+  m_TagString: rainCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2951,8 +3298,8 @@ Transform:
   m_LocalPosition: {x: 37.34, y: 1.51, z: 44.579765}
   m_LocalScale: {x: 1.0362254, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 16
+  m_Father: {fileID: 1857850188}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1420058997
 MonoBehaviour:
@@ -3066,6 +3413,32 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &1420058999
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420058995}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.00000023841858}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &1421854740
 GameObject:
   m_ObjectHideFlags: 0
@@ -3077,9 +3450,10 @@ GameObject:
   - component: {fileID: 1421854741}
   - component: {fileID: 1421854743}
   - component: {fileID: 1421854742}
+  - component: {fileID: 1421854744}
   m_Layer: 0
   m_Name: New SpriteShapeController (12)
-  m_TagString: Untagged
+  m_TagString: sunnyCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3095,8 +3469,8 @@ Transform:
   m_LocalPosition: {x: 24.8, y: 4.22, z: 44.579765}
   m_LocalScale: {x: 1.0362254, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 11
+  m_Father: {fileID: 201402486}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1421854742
 MonoBehaviour:
@@ -3210,6 +3584,32 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &1421854744
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421854740}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000019073486, y: 0.00000023841858}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &1433691580
 GameObject:
   m_ObjectHideFlags: 0
@@ -3221,9 +3621,10 @@ GameObject:
   - component: {fileID: 1433691581}
   - component: {fileID: 1433691583}
   - component: {fileID: 1433691582}
+  - component: {fileID: 1433691584}
   m_Layer: 0
   m_Name: New SpriteShapeController (16)
-  m_TagString: Untagged
+  m_TagString: sunnyCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3239,8 +3640,8 @@ Transform:
   m_LocalPosition: {x: 32.19, y: 3.18, z: 44.579765}
   m_LocalScale: {x: 1.0362254, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 15
+  m_Father: {fileID: 201402486}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1433691582
 MonoBehaviour:
@@ -3354,6 +3755,32 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &1433691584
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433691580}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000038146973, y: -0.00000023841858}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &1460662856
 GameObject:
   m_ObjectHideFlags: 0
@@ -3365,9 +3792,10 @@ GameObject:
   - component: {fileID: 1460662857}
   - component: {fileID: 1460662859}
   - component: {fileID: 1460662858}
+  - component: {fileID: 1460662860}
   m_Layer: 0
   m_Name: New SpriteShapeController (25)
-  m_TagString: Untagged
+  m_TagString: sunnyCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3383,8 +3811,8 @@ Transform:
   m_LocalPosition: {x: -7.27, y: 7.91, z: 44.579765}
   m_LocalScale: {x: 0.5418172, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 24
+  m_Father: {fileID: 201402486}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1460662858
 MonoBehaviour:
@@ -3498,6 +3926,32 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &1460662860
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460662856}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.00000071525574}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &1545952391
 GameObject:
   m_ObjectHideFlags: 0
@@ -3653,9 +4107,10 @@ GameObject:
   - component: {fileID: 1550249053}
   - component: {fileID: 1550249055}
   - component: {fileID: 1550249054}
+  - component: {fileID: 1550249056}
   m_Layer: 0
   m_Name: New SpriteShapeController (13)
-  m_TagString: Untagged
+  m_TagString: sunnyCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3671,8 +4126,8 @@ Transform:
   m_LocalPosition: {x: 21.2, y: 7.91, z: 44.579765}
   m_LocalScale: {x: 0.5418172, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 12
+  m_Father: {fileID: 201402486}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1550249054
 MonoBehaviour:
@@ -3786,6 +4241,32 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &1550249056
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550249052}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.00000071525574}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &1626452402
 GameObject:
   m_ObjectHideFlags: 0
@@ -3797,9 +4278,10 @@ GameObject:
   - component: {fileID: 1626452403}
   - component: {fileID: 1626452405}
   - component: {fileID: 1626452404}
+  - component: {fileID: 1626452406}
   m_Layer: 0
   m_Name: New SpriteShapeController (18)
-  m_TagString: Untagged
+  m_TagString: rainCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3815,8 +4297,8 @@ Transform:
   m_LocalPosition: {x: 34.59, y: -4.55, z: 44.579765}
   m_LocalScale: {x: 0.5418172, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 17
+  m_Father: {fileID: 1857850188}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1626452404
 MonoBehaviour:
@@ -3930,6 +4412,32 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &1626452406
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626452402}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.00000023841858}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &1664211594
 GameObject:
   m_ObjectHideFlags: 0
@@ -4148,9 +4656,10 @@ GameObject:
   - component: {fileID: 1686717812}
   - component: {fileID: 1686717814}
   - component: {fileID: 1686717813}
+  - component: {fileID: 1686717815}
   m_Layer: 0
   m_Name: New SpriteShapeController (26)
-  m_TagString: Untagged
+  m_TagString: sunnyCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4166,8 +4675,8 @@ Transform:
   m_LocalPosition: {x: 1.75, y: -4.71, z: 44.579765}
   m_LocalScale: {x: 0.5418172, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 25
+  m_Father: {fileID: 201402486}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1686717813
 MonoBehaviour:
@@ -4281,6 +4790,32 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &1686717815
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686717811}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.00000023841858}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &1774607123
 GameObject:
   m_ObjectHideFlags: 0
@@ -4292,9 +4827,10 @@ GameObject:
   - component: {fileID: 1774607124}
   - component: {fileID: 1774607126}
   - component: {fileID: 1774607125}
+  - component: {fileID: 1774607127}
   m_Layer: 0
   m_Name: New SpriteShapeController (14)
-  m_TagString: Untagged
+  m_TagString: sunnyCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4307,11 +4843,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1774607123}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.22, y: -4.71, z: 44.579765}
+  m_LocalPosition: {x: 30.220001, y: -4.71, z: 44.579765}
   m_LocalScale: {x: 0.5418172, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 13
+  m_Father: {fileID: 201402486}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1774607125
 MonoBehaviour:
@@ -4425,6 +4961,32 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &1774607127
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774607123}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.00000023841858}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &1778131177
 GameObject:
   m_ObjectHideFlags: 0
@@ -4436,9 +4998,10 @@ GameObject:
   - component: {fileID: 1778131178}
   - component: {fileID: 1778131180}
   - component: {fileID: 1778131179}
+  - component: {fileID: 1778131181}
   m_Layer: 0
   m_Name: New SpriteShapeController (3)
-  m_TagString: Untagged
+  m_TagString: sunnyCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4454,8 +5017,8 @@ Transform:
   m_LocalPosition: {x: 17.36, y: -4.97, z: 44.579765}
   m_LocalScale: {x: 0.5418172, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 2
+  m_Father: {fileID: 201402486}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1778131179
 MonoBehaviour:
@@ -4569,6 +5132,32 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &1778131181
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778131177}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000038146973, y: -0.00000023841858}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &1792943461
 GameObject:
   m_ObjectHideFlags: 0
@@ -4580,9 +5169,10 @@ GameObject:
   - component: {fileID: 1792943462}
   - component: {fileID: 1792943464}
   - component: {fileID: 1792943463}
+  - component: {fileID: 1792943465}
   m_Layer: 0
   m_Name: New SpriteShapeController (9)
-  m_TagString: Untagged
+  m_TagString: sunnyCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4598,8 +5188,8 @@ Transform:
   m_LocalPosition: {x: 6.21, y: 5.04, z: 44.579765}
   m_LocalScale: {x: 0.5418172, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 8
+  m_Father: {fileID: 201402486}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1792943463
 MonoBehaviour:
@@ -4713,6 +5303,32 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &1792943465
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792943461}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000019073486, y: 0.00000071525574}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &1823316845
 GameObject:
   m_ObjectHideFlags: 0
@@ -4724,9 +5340,10 @@ GameObject:
   - component: {fileID: 1823316846}
   - component: {fileID: 1823316848}
   - component: {fileID: 1823316847}
+  - component: {fileID: 1823316849}
   m_Layer: 0
   m_Name: New SpriteShapeController (21)
-  m_TagString: Untagged
+  m_TagString: sunnyCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4742,8 +5359,8 @@ Transform:
   m_LocalPosition: {x: -7.37, y: -4.82, z: 44.579765}
   m_LocalScale: {x: 0.5418172, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 20
+  m_Father: {fileID: 201402486}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1823316847
 MonoBehaviour:
@@ -4857,6 +5474,32 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &1823316849
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823316845}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000047683716, y: 0.00000071525574}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &1844331810
 GameObject:
   m_ObjectHideFlags: 0
@@ -4868,9 +5511,10 @@ GameObject:
   - component: {fileID: 1844331811}
   - component: {fileID: 1844331813}
   - component: {fileID: 1844331812}
+  - component: {fileID: 1844331814}
   m_Layer: 0
   m_Name: New SpriteShapeController (22)
-  m_TagString: Untagged
+  m_TagString: sunnyCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4886,8 +5530,8 @@ Transform:
   m_LocalPosition: {x: -5.34, y: -7.91, z: 44.579765}
   m_LocalScale: {x: 1.0362254, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 21
+  m_Father: {fileID: 201402486}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1844331812
 MonoBehaviour:
@@ -5001,6 +5645,72 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &1844331814
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844331810}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.000000029802322, y: -0.00000023841858}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0
+--- !u!1 &1857850187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1857850188}
+  m_Layer: 0
+  m_Name: RainClouds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1857850188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857850187}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 264413947}
+  - {fileID: 241483280}
+  - {fileID: 1147220678}
+  - {fileID: 1227524476}
+  - {fileID: 241679722}
+  - {fileID: 542017458}
+  - {fileID: 1626452403}
+  - {fileID: 1420058996}
+  - {fileID: 95472935}
+  - {fileID: 356601732}
+  m_Father: {fileID: 846697957}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1859567636
 GameObject:
   m_ObjectHideFlags: 0
@@ -5056,9 +5766,10 @@ GameObject:
   - component: {fileID: 1885460062}
   - component: {fileID: 1885460064}
   - component: {fileID: 1885460063}
+  - component: {fileID: 1885460065}
   m_Layer: 0
   m_Name: New SpriteShapeController (10)
-  m_TagString: Untagged
+  m_TagString: sunnyCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5071,11 +5782,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885460061}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.13, y: -7.91, z: 44.579765}
+  m_LocalPosition: {x: 23.130001, y: -7.91, z: 44.579765}
   m_LocalScale: {x: 1.0362254, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 9
+  m_Father: {fileID: 201402486}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1885460063
 MonoBehaviour:
@@ -5189,6 +5900,32 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &1885460065
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885460061}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.00000023841858}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &2039769663
 GameObject:
   m_ObjectHideFlags: 0
@@ -5200,9 +5937,10 @@ GameObject:
   - component: {fileID: 2039769664}
   - component: {fileID: 2039769666}
   - component: {fileID: 2039769665}
+  - component: {fileID: 2039769667}
   m_Layer: 0
   m_Name: New SpriteShapeController (6)
-  m_TagString: Untagged
+  m_TagString: sunnyCloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5218,8 +5956,8 @@ Transform:
   m_LocalPosition: {x: 10.61, y: -2.53, z: 44.579765}
   m_LocalScale: {x: 1.0904071, y: 0.5418172, z: 0.5418172}
   m_Children: []
-  m_Father: {fileID: 846697957}
-  m_RootOrder: 5
+  m_Father: {fileID: 201402486}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2039769665
 MonoBehaviour:
@@ -5333,3 +6071,29 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!61 &2039769667
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039769663}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000009536743, y: -0.00000023841858}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 4}
+  m_EdgeRadius: 0

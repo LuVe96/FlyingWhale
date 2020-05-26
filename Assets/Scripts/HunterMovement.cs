@@ -7,11 +7,17 @@ public class HunterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayerSpeed ps = PlayerSpeed.Slower;
-        if (GameManager.Instance.playerSpeed  == ps )
+        PlayerSpeed pss = PlayerSpeed.Slower;
+        if (GameManager.Instance.playerSpeed  == pss )
         {
-            transform.position += new Vector3(ps.GetSpeed() * Time.deltaTime, 0, 0);
+            transform.position += new Vector3(pss.GetSpeed() * Time.deltaTime, 0, 0);
         }
-        
+
+        PlayerSpeed psSun = PlayerSpeed.SunSlower;
+        if (GameManager.Instance.playerSpeed == psSun)
+        {
+            transform.position += new Vector3(psSun.GetSpeed() * Time.deltaTime, 0, 0);
+        }
+
     }
 }

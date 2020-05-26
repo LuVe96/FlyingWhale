@@ -6,6 +6,8 @@ TagManager:
   tags:
   - harpune
   - netz
+  - rainCloud
+  - sunnyCloud
   layers:
   - Default
   - TransparentFX

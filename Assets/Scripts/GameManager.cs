@@ -81,7 +81,7 @@ static class PlayerSpeedMethods
             case PlayerSpeed.Slower:
                 return 0.5f;
             case PlayerSpeed.SunSlower:
-                return 0.5f;
+                return 0.2f;
             case PlayerSpeed.Normal:
                 return 0.0f;
             case PlayerSpeed.Faster:

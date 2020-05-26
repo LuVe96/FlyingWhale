@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WalMovement : MonoBehaviour
+public class WaleMovement : MonoBehaviour
 {
 
     public float velocty = 0.1f;
@@ -50,10 +50,9 @@ public class WalMovement : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("collision");
-        if (other.gameObject.tag == "harpune" || other.gameObject.tag == "harpune(Clone)")
+        if (collision.gameObject.tag == "harpune" || collision.gameObject.tag == "harpune(Clone)")
         {
             //hunter.transform.position += new Vector3(1.5f, 0, 0);
 
@@ -61,12 +60,26 @@ public class WalMovement : MonoBehaviour
 
         }
 
-        if (other.gameObject.tag == "netz" || other.gameObject.tag == "harpune(Clone)")
+        if (collision.gameObject.tag == "netz" || collision.gameObject.tag == "harpune(Clone)")
         {
             Debug.Log("Game over");
             GameManager.Instance.PlayerIsDead();
-          
         }
 
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "rainCloud")
+        {
+            GameManager.Instance.PlayerGotSlower();
+        }
+
+        if (collision.gameObject.tag == "sunnyCloud")
+        {
+            GameManager.Instance.PlayerGotSlower(PlayerSpeed.SunSlower);
+        }
+    }
+
+
 }

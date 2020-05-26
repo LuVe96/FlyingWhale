@@ -24,5 +24,13 @@ public class ObjectScrolling : MonoBehaviour
         {
             transform.position += new Vector3(ps.GetSpeed() * Time.deltaTime, 0, 0);
         }
+
+        PlayerSpeed psSun = PlayerSpeed.SunSlower;
+        if (GameManager.Instance.playerSpeed == psSun)
+        {
+            transform.position += new Vector3(psSun.GetSpeed() * Time.deltaTime, 0, 0);
+        }
     }
+
+
 }
