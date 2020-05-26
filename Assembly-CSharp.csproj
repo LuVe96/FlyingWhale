@@ -68,7 +68,6 @@
     <Compile Include="Assets\Scripts\HunterMovement.cs" />
     <Compile Include="Assets\Scripts\ObjectScrolling.cs" />
     <Compile Include="Assets\Scripts\RepeadableBackground.cs" />
-    <Compile Include="Assets\Scripts\WalMovement.cs" />
     <Compile Include="Assets\Scripts\WaleMovement.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

@@ -9,8 +9,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance = null;
 
     public bool IsGameOver { get; private set; }
+    public float playerOffsetY { get; private set; } = 0f;
     public PlayerSpeed playerSpeed { get; private set; } = PlayerSpeed.Normal;
     public float speedPeriode = 1.2f;
+    private float defaultSpeedPeriode = 0;
 
     private float time0 = 0;
 
@@ -24,7 +26,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
+        defaultSpeedPeriode = speedPeriode;
     }
 
 
@@ -40,8 +42,18 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void PlayerGotSlower( PlayerSpeed speed = PlayerSpeed.Slower)
+    public void PlayerGotSlower(bool isHarpune, PlayerSpeed speed = PlayerSpeed.Slower)
     {
+        if (isHarpune)
+        {
+            speedPeriode = defaultSpeedPeriode;
+            Debug.Log("slower by harpune");
+        } else
+        {
+            speedPeriode = 0.1f;
+            Debug.Log("slower by cloud");
+        }
+
         playerSpeed = speed;
         time0 = 0;
     }
@@ -56,6 +68,13 @@ public class GameManager : MonoBehaviour
     {
 
     }
+
+
+    public void setPlayerOffsetY(float offset)
+    {
+        playerOffsetY = offset;
+    }
+
 
 }
 

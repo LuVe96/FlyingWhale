@@ -16,7 +16,7 @@ public class HarpuneShot : MonoBehaviour
         direction = wale.position - transform.position;
         float x_leng = Mathf.Abs(wale.position.x - transform.position.x);
         float y_leng = Mathf.Abs(wale.position.y - transform.position.y);
-
+        //direction += new Vector3(0, GameManager.Instance.playerOffsetY, 0);
 
         transform.LookAt(wale);
         transform.Rotate(new Vector3(0, 90, 0));

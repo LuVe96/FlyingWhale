@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WalMovement : MonoBehaviour
+public class WaleMovement : MonoBehaviour
 {
 
-    public float velocty = 0.1f;
-    //public Transform hunter;
+    //public float velocty = 0.1f;
+    ////public Transform hunter;
 
-    private bool isUpPressed = false;
-    private bool isDownPressed = false;
+    //private bool isUpPressed = false;
+    //private bool isDownPressed = false;
 
 
     // Start is called before the first frame update
@@ -22,51 +22,62 @@ public class WalMovement : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.W) || isUpPressed) 
-        {
-            transform.position += new Vector3(0, velocty * Time.deltaTime, 0); 
-            Debug.Log("up");
+        //if (Input.GetKeyDown(KeyCode.W) || isUpPressed) 
+        //{
+        //    transform.position += new Vector3(0, velocty * Time.deltaTime, 0); 
+        //    Debug.Log("up");
 
-            isUpPressed = true;
+        //    isUpPressed = true;
+        //}
+
+        //if (Input.GetKeyUp(KeyCode.W))
+        //{
+        //    isUpPressed = false;
+        //}
+
+
+
+        //if (Input.GetKeyDown(KeyCode.S) || isDownPressed)
+        //{
+        //    transform.position += new Vector3(0, -velocty * Time.deltaTime, 0);
+        //    isDownPressed = true;
+        //}
+
+        //if (Input.GetKeyUp(KeyCode.S))
+        //{
+        //    isDownPressed = false;
+        //}
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "harpune" || collision.gameObject.tag == "harpune(Clone)")
+        {
+            //hunter.transform.position += new Vector3(1.5f, 0, 0);
+
+            GameManager.Instance.PlayerGotSlower(true);
+
         }
 
-        if (Input.GetKeyUp(KeyCode.W))
+        if (collision.gameObject.tag == "netz" || collision.gameObject.tag == "harpune(Clone)")
         {
-            isUpPressed = false;
-        }
-
-
-
-        if (Input.GetKeyDown(KeyCode.S) || isDownPressed)
-        {
-            transform.position += new Vector3(0, -velocty * Time.deltaTime, 0);
-            isDownPressed = true;
-        }
-
-        if (Input.GetKeyUp(KeyCode.S))
-        {
-            isDownPressed = false;
+            Debug.Log("Game over");
+            GameManager.Instance.PlayerIsDead();
         }
 
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("collision");
-        if (other.gameObject.tag == "harpune" || other.gameObject.tag == "harpune(Clone)")
+        if (collision.gameObject.tag == "rainCloud")
         {
-            //hunter.transform.position += new Vector3(1.5f, 0, 0);
-
-            GameManager.Instance.PlayerGotSlower();
-
+            GameManager.Instance.PlayerGotSlower(false);
         }
 
-        if (other.gameObject.tag == "netz" || other.gameObject.tag == "harpune(Clone)")
+        if (collision.gameObject.tag == "sunnyCloud")
         {
-            Debug.Log("Game over");
-            GameManager.Instance.PlayerIsDead();
-          
+            GameManager.Instance.PlayerGotSlower(false, PlayerSpeed.SunSlower);
         }
-
     }
 }
