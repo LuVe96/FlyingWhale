@@ -66,6 +66,12 @@ public class WaleMovement : MonoBehaviour
             GameManager.Instance.PlayerIsDead();
         }
 
+        if (collision.gameObject.tag == "fish")
+        {
+            GameManager.Instance.PlayerGotFaster();
+        }
+
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)

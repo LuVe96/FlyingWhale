@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     private float defaultSpeedPeriode = 0;
     public bool playerIsInCloud = false;
 
-    private float time0 = 0;
+    private float time0Sum = 0;
 
     private void Awake()
     {
@@ -34,12 +34,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time0 += Time.deltaTime;
-        if (time0 >= speedPeriode)
+        time0Sum += Time.deltaTime;
+        if (time0Sum >= speedPeriode)
         {
             playerSpeed = PlayerSpeed.Normal;
             playerIsInCloud = false;
-            time0 = 0;
+            time0Sum = 0;
         }
         
     }
@@ -58,13 +58,15 @@ public class GameManager : MonoBehaviour
         }
 
         playerSpeed = speed;
-        time0 = 0;
+        time0Sum = 0;
     }
 
     public void PlayerGotFaster(PlayerSpeed speed = PlayerSpeed.Faster)
     {
+        
+        speedPeriode = defaultSpeedPeriode;
         playerSpeed = speed;
-        time0 = 0;
+        time0Sum = 0;
     }
 
     public void PlayerIsDead()
@@ -107,7 +109,7 @@ static class PlayerSpeedMethods
             case PlayerSpeed.Normal:
                 return 0.0f;
             case PlayerSpeed.Faster:
-                return 0.5f;
+                return -1f;
             default:
                 return 0.0f;
 

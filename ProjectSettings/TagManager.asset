@@ -8,6 +8,7 @@ TagManager:
   - netz
   - rainCloud
   - sunnyCloud
+  - fish
   layers:
   - Default
   - TransparentFX
