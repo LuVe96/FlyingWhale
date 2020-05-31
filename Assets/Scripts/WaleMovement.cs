@@ -5,11 +5,12 @@ using UnityEngine;
 public class WaleMovement : MonoBehaviour
 {
 
-    //public float velocty = 0.1f;
+    public float turnVelocty = 35;
     ////public Transform hunter;
 
-    //private bool isUpPressed = false;
-    //private bool isDownPressed = false;
+    private bool isUpPressed = false;
+    private bool isDownPressed = false;
+    private bool isNoKeyPressed = true;
 
 
     // Start is called before the first frame update
@@ -22,31 +23,58 @@ public class WaleMovement : MonoBehaviour
     void Update()
     {
 
-        //if (Input.GetKeyDown(KeyCode.W) || isUpPressed) 
-        //{
-        //    transform.position += new Vector3(0, velocty * Time.deltaTime, 0); 
-        //    Debug.Log("up");
+        if (Input.GetKeyDown(KeyCode.W) || isUpPressed)
+        {
+            if (transform.rotation.z <= 0.25)
+            {
+                transform.Rotate(new Vector3(0, 0, turnVelocty * Time.deltaTime));
+                Debug.Log("Rot up");
+            }
+           
 
-        //    isUpPressed = true;
-        //}
+            isUpPressed = true;
+            isNoKeyPressed = false;
+        }
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            isUpPressed = false;
+            isNoKeyPressed = true;
+        }
 
-        //if (Input.GetKeyUp(KeyCode.W))
-        //{
-        //    isUpPressed = false;
-        //}
+       
+
+        if (Input.GetKeyDown(KeyCode.S) || isDownPressed)
+        {
+            if (transform.rotation.z >= -0.25)
+            {
+                transform.Rotate(new Vector3(0, 0, -turnVelocty * Time.deltaTime));
+                Debug.Log("Rot down");
+            }
+
+            isDownPressed = true;
+            isNoKeyPressed = false;
+        }
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            isDownPressed = false;
+            isNoKeyPressed = true;
+        }
 
 
+        if (isNoKeyPressed)
+        {
+            if (transform.rotation.z > 0)
+            {
+                transform.Rotate(new Vector3(0, 0, -turnVelocty * Time.deltaTime));
+            }
 
-        //if (Input.GetKeyDown(KeyCode.S) || isDownPressed)
-        //{
-        //    transform.position += new Vector3(0, -velocty * Time.deltaTime, 0);
-        //    isDownPressed = true;
-        //}
+            if (transform.rotation.z < 0)
+            {
+                transform.Rotate(new Vector3(0, 0, turnVelocty * Time.deltaTime));
+            }
 
-        //if (Input.GetKeyUp(KeyCode.S))
-        //{
-        //    isDownPressed = false;
-        //}
+        }
+
 
     }
 
