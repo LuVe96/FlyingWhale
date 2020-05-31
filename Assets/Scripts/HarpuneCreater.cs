@@ -9,6 +9,7 @@ public class HarpuneCreater : MonoBehaviour
     public float spawnTime = 2;
 
     private float timeSum = 0;
+    private float t2Sum = 0;
     private bool isThreeShot = true;
     private float threeShotTimeSum = 0;
     private int threeShotShots = 0;
@@ -19,7 +20,7 @@ public class HarpuneCreater : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        spawnTime -= 0.5f;
     }
 
     // Update is called once per frame
@@ -28,21 +29,27 @@ public class HarpuneCreater : MonoBehaviour
         timeSum += Time.deltaTime;
         threeShotTimeSum += Time.deltaTime;
 
-        if ( timeSum >= spawnTime)
+        if ( timeSum >= spawnTime && !GameManager.Instance.playerIsInCloud)
         {
-            timeSum = 0;
-            isThreeShot = true;
+
+            t2Sum += Time.deltaTime;
+            if (t2Sum >= 0.5f)
+            {
+                t2Sum = 0;
+                timeSum = 0;
+                isThreeShot = true;
+            }
 
         }
 
-        if (isThreeShot && threeShotTimeSum >= 0.4)
+        if (isThreeShot && threeShotTimeSum >= 0.3)
         {
             threeShotTimeSum = 0;
             threeShotShots++;
 
             GameObject newHarpune = Instantiate(Harpune);
             newHarpune.transform.position = hunter.transform.position;
-            newHarpune.transform.localScale *= 0.3f;
+            newHarpune.transform.localScale *= 0.15f;
             HarpuneShot hp = newHarpune.GetComponent<HarpuneShot>();
             hp.Shot();
 

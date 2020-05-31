@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public PlayerSpeed playerSpeed { get; private set; } = PlayerSpeed.Normal;
     public float speedPeriode = 1.2f;
     private float defaultSpeedPeriode = 0;
+    public bool playerIsInCloud = false;
 
     private float time0 = 0;
 
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour
         if (time0 >= speedPeriode)
         {
             playerSpeed = PlayerSpeed.Normal;
+            playerIsInCloud = false;
             time0 = 0;
         }
         
@@ -52,6 +54,7 @@ public class GameManager : MonoBehaviour
         {
             speedPeriode = 0.1f;
             Debug.Log("slower by cloud");
+            playerIsInCloud = true;
         }
 
         playerSpeed = speed;
