@@ -29,6 +29,8 @@ public class HarpuneCreater : MonoBehaviour
         timeSum += Time.deltaTime;
         threeShotTimeSum += Time.deltaTime;
 
+        Debug.Log("in Cloud: " + GameManager.Instance.playerIsInCloud);
+
         if ( timeSum >= spawnTime && !GameManager.Instance.playerIsInCloud)
         {
 

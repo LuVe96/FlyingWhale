@@ -49,11 +49,11 @@ public class GameManager : MonoBehaviour
         if (isHarpune)
         {
             speedPeriode = defaultSpeedPeriode;
-            Debug.Log("slower by harpune");
+            //Debug.Log("slower by harpune");
         } else
         {
-            speedPeriode = 0.1f;
-            Debug.Log("slower by cloud");
+            speedPeriode = 0.3f;
+            //Debug.Log("slower by cloud");
             playerIsInCloud = true;
         }
 

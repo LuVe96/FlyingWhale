@@ -97,6 +97,7 @@ public class WaleMovement : MonoBehaviour
         if (collision.gameObject.tag == "fish")
         {
             GameManager.Instance.PlayerGotFaster();
+            Destroy(collision.gameObject);
         }
 
 
