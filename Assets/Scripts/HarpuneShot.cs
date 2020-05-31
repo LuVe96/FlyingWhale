@@ -5,26 +5,63 @@ using UnityEngine;
 public class HarpuneShot : MonoBehaviour
 {
 
-    public Transform wale;
+    private Transform wale;
     public float velocity;
+    public float timeDeletion = 2;
     private Vector3 direction;
+   
 
-    // Start is called before the first frame update
-    void Start()
+    private bool isShooting = false;
+    private float timeSum = 0;
+
+  
+
+    private void Awake()
     {
         wale = GameObject.Find("wal").transform;
-        direction = wale.position - transform.position;
-        float x_leng = Mathf.Abs(wale.position.x - transform.position.x);
-        float y_leng = Mathf.Abs(wale.position.y - transform.position.y);
-        //direction += new Vector3(0, GameManager.Instance.playerOffsetY, 0);
 
-        transform.LookAt(wale);
-        transform.Rotate(new Vector3(0, 90, 0));
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += direction * velocity ;
+        if (isShooting)
+        {
+            transform.position += direction * velocity * Time.deltaTime;
+            timeSum += Time.deltaTime;
+
+            if (timeSum >= timeDeletion)
+            {
+                ResetShot();
+            }
+        }
+        
+    }
+
+    public void Shot()
+    {
+
+        //random position near wale
+        float randomNumber = Random.Range(-0.8f, 0.8f);
+        //Transform modWale = wale;
+        //modWale.position += new Vector3(0.2f, randomNumber, 0);
+        Vector3 pos = wale.position + new Vector3(1f, randomNumber, 0);
+
+        //shoting direction by position
+        direction = pos - transform.position;
+        float x_leng = Mathf.Abs(wale.position.x - transform.position.x);
+        float y_leng = Mathf.Abs(wale.position.y - transform.position.y);
+        //direction += new Vector3(0, GameManager.Instance.playerOffsetY, 0);
+
+        transform.LookAt(pos);
+        transform.Rotate(new Vector3(0, 90, 0));
+        isShooting = true;
+    }
+
+    private void ResetShot()
+    {
+        timeSum = 0;
+        isShooting = false;
+        Destroy(gameObject);
     }
 }

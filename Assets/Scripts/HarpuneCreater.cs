@@ -5,11 +5,14 @@ using UnityEngine;
 public class HarpuneCreater : MonoBehaviour
 {
     public GameObject Harpune;
-    public int NumberOfHarpunes = 15;
     public Transform hunter;
     public float spawnTime = 2;
 
-    private float seconds = 0;
+    private float timeSum = 0;
+    private bool isThreeShot = true;
+    private float threeShotTimeSum = 0;
+    private int threeShotShots = 0;
+   
 
 
 
@@ -22,19 +25,37 @@ public class HarpuneCreater : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        seconds += Time.deltaTime;
+        timeSum += Time.deltaTime;
+        threeShotTimeSum += Time.deltaTime;
 
-        if ( seconds >= spawnTime)
+        if ( timeSum >= spawnTime)
         {
-            seconds = 0;
+            timeSum = 0;
+            isThreeShot = true;
+
+        }
+
+        if (isThreeShot && threeShotTimeSum >= 0.4)
+        {
+            threeShotTimeSum = 0;
+            threeShotShots++;
 
             GameObject newHarpune = Instantiate(Harpune);
             newHarpune.transform.position = hunter.transform.position;
-            newHarpune.transform.localScale *= 0.5f ;
+            newHarpune.transform.localScale *= 0.3f;
+            HarpuneShot hp = newHarpune.GetComponent<HarpuneShot>();
+            hp.Shot();
 
+            if(threeShotShots >= 3)
+            {
+                isThreeShot = false;
+                threeShotShots = 0;
+            }
 
-            
         }
-        
+
+      
     }
+
+   
 }
