@@ -6922,10 +6922,10 @@ GameObject:
   - component: {fileID: 486933778}
   - component: {fileID: 486933780}
   - component: {fileID: 486933779}
-  - component: {fileID: 486933781}
   - component: {fileID: 486933783}
   - component: {fileID: 486933784}
   - component: {fileID: 486933782}
+  - component: {fileID: 486933781}
   m_Layer: 0
   m_Name: wal
   m_TagString: Untagged
@@ -6941,7 +6941,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486933777}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.6, y: -1.3692, z: 0}
+  m_LocalPosition: {x: 6.43, y: -1.3692, z: 0}
   m_LocalScale: {x: 2.03917, y: 1.0559988, z: 2.9131}
   m_Children: []
   m_Father: {fileID: 68887200}
@@ -7068,10 +7068,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 486933777}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a988bd8d9939e664695069b7a210c4fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 40c83783127a5a649930bc1b91faaaec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnVelocty: 25
+  turnVelocty: 35
+  waleVelocity: 1
 --- !u!61 &486933782
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9077,7 +9078,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692924261}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.481621, y: 2.53, z: 0}
+  m_LocalPosition: {x: -7.73, y: 2.53, z: 0}
   m_LocalScale: {x: 0.56145, y: 0.56145, z: 0.56145}
   m_Children:
   - {fileID: 900372553}
@@ -10628,7 +10629,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 846697956}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a21ba7c543df327438230526594e4d74, type: 3}
+  m_Script: {fileID: 11500000, guid: 936c28e9f37524b488bbe63b4f768e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
@@ -21088,8 +21089,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1859567637}
   - component: {fileID: 1859567638}
-  - component: {fileID: 1859567639}
   - component: {fileID: 1859567640}
+  - component: {fileID: 1859567639}
   m_Layer: 0
   m_Name: Walehunters
   m_TagString: Untagged
@@ -21119,7 +21120,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859567636}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a9b280e4e4c2754bb9161433e7f00db, type: 3}
   m_Name: 
@@ -21131,9 +21132,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859567636}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a21ba7c543df327438230526594e4d74, type: 3}
+  m_Script: {fileID: 11500000, guid: 936c28e9f37524b488bbe63b4f768e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
