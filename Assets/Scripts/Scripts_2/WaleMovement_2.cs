@@ -30,7 +30,7 @@ public class WaleMovement_2 : MonoBehaviour
             {
                 transform.Rotate(new Vector3(0, 0, turnVelocty * Time.deltaTime));               
             }
-            transform.position += new Vector3(0, waleVelocity * Time.deltaTime, 0);
+            
 
             isUpPressed = true;
             isNoKeyPressed = false;
@@ -50,7 +50,7 @@ public class WaleMovement_2 : MonoBehaviour
                 transform.Rotate(new Vector3(0, 0, -turnVelocty * Time.deltaTime));
             }
 
-            transform.position += new Vector3(0, -waleVelocity * Time.deltaTime, 0);
+           
             isDownPressed = true;
             isNoKeyPressed = false;
         }
