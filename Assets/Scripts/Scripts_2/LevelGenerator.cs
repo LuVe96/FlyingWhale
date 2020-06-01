@@ -5,24 +5,69 @@ using UnityEngine;
 public class LevelGenerator : MonoBehaviour
 {
 
+    public Transform referenz;
     public GameObject rainCloud;
     public GameObject sunnyCloud;
     public GameObject fish;
 
+    public int numberOfFish = 20;
+    public int numberOfRainCloud = 20;
+    public int numberOfSunnyCloud = 20;
+
+    private GameObject[] objectPool;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        int numberOfObjects = numberOfFish + numberOfRainCloud + numberOfSunnyCloud;
+        objectPool = new GameObject[numberOfObjects];
+        Transform parent = GameObject.Find("MovingObjects").transform;
+
+        for (int i = 0; i < numberOfObjects; i++)
+        {
+            float randomX = Random.Range(-10.0f, 10.0f);
+            float randomY = Random.Range(-10.0f, 10.0f);
+
+            if (i < numberOfSunnyCloud)
+            {
+                GameObject obj = Instantiate(sunnyCloud, parent);
+                obj.transform.position = new Vector3(randomX, randomY, 0);
+                objectPool[i] = obj;
+                obj.GetComponent<Generatedobject>().setReferenz(referenz);
+            }
+            else if (i < (numberOfRainCloud + numberOfSunnyCloud))
+            {
+                GameObject obj = Instantiate(rainCloud, parent);
+                obj.transform.position = new Vector3(randomX, randomY, 0);
+                objectPool[i] = obj;
+                obj.GetComponent<Generatedobject>().setReferenz(referenz);
+            }
+            else if (i < numberOfObjects)
+            {
+                GameObject obj = Instantiate(fish, parent);
+                obj.transform.position = new Vector3(randomX, randomY, 0);
+                objectPool[i] = obj;
+                obj.GetComponent<Generatedobject>().setReferenz(referenz);
+            }
+      
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        //transform parent = GameObject.Find("MovingObjects");
-        //GameObject newSunnyCloud = Instantiate(sunnyCloud, parent);
-        //newSunnyCloud.transform.position = hunter.transform.position;
-        //newSunnyCloud.transform.localScale *= 0.15f;
-        
+        //foreach (GameObject obj in objectPool)
+        //{
+        //    if (obj.transform.position.x < -10)
+        //    {
+        //        float randomX = Random.Range(10.0f, 20.0f);
+        //        float randomY = Random.Range(-10.0f, 10.0f);
+        //        obj.transform.position = new Vector3(randomX, randomY + referenz.position.y, 0);
+        //    }
+        //}
+
     }
+
+
 }
