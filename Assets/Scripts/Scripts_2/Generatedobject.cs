@@ -9,7 +9,12 @@ public class Generatedobject : MonoBehaviour
 
     public void setReferenz(Transform _referenz)
     {
-        referenz = _referenz;
+        //referenz = _referenz;
+    }
+
+    private void Start()
+    {
+       referenz= GameObject.Find("MovingObjectReferenz").transform;    
     }
 
     // Update is called once per frame
