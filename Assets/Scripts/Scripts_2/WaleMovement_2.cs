@@ -12,18 +12,20 @@ public class WaleMovement_2 : MonoBehaviour
     private bool isUpPressed = false;
     private bool isDownPressed = false;
     private bool isNoKeyPressed = true;
+    private Animator animator;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        // horizontal Movement
         if (Input.GetKeyDown(KeyCode.W) || isUpPressed)
         {
             if (transform.rotation.z <= 0.25)
@@ -40,8 +42,6 @@ public class WaleMovement_2 : MonoBehaviour
             isUpPressed = false;
             isNoKeyPressed = true;
         }
-
-
 
         if (Input.GetKeyDown(KeyCode.S) || isDownPressed)
         {
@@ -75,7 +75,18 @@ public class WaleMovement_2 : MonoBehaviour
 
         }
 
+        // vertical movement
         transform.position += new Vector3(-GameManager.Instance.playerSpeed.GetSpeed() * Time.deltaTime, 0, 0);
+
+        //Animations
+        if(GameManager.Instance.playerSpeed == PlayerSpeed.Faster)
+        {
+            animator.speed = 2f;
+        }
+        else
+        {
+            animator.speed = 1f;
+        }
     }
 
 

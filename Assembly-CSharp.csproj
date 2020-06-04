@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Scripts_2\Generatedobject.cs" />
     <Compile Include="Assets\Scripts\Scripts_2\LevelGenerator.cs" />
     <Compile Include="Assets\Scripts\Scripts_2\ObjectScrolling_2.cs" />
+    <Compile Include="Assets\Scripts\Scripts_2\WaleMovementAnim.cs" />
     <Compile Include="Assets\Scripts\Scripts_2\WaleMovement_2.cs" />
     <Compile Include="Assets\Scripts\WaleMovement.cs" />
     <Reference Include="UnityEngine">
