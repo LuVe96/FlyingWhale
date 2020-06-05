@@ -9,11 +9,12 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance = null;
 
     public bool IsGameOver { get; private set; }
-    public float playerOffsetY { get; private set; } = 0f;
     public PlayerSpeed playerSpeed { get; private set; } = PlayerSpeed.Normal;
+    public LevelDifficulty levelDifficulty { get; private set; } = LevelDifficulty.Easy;
     public float speedPeriode = 1.2f;
     private float defaultSpeedPeriode = 0;
     public bool playerIsInCloud = false;
+
 
     private float time0Sum = 0;
 
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);  // the Singelton Obj get not deleted when change szene
         }
         else
         {
@@ -69,17 +71,15 @@ public class GameManager : MonoBehaviour
         time0Sum = 0;
     }
 
+    public void setLevelDificulty(LevelDifficulty ld)
+    {
+        levelDifficulty = ld;
+    }
+
     public void PlayerIsDead()
     {
 
     }
-
-
-    public void setPlayerOffsetY(float offset)
-    {
-        playerOffsetY = offset;
-    }
-
 
 }
 
