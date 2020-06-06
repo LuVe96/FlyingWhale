@@ -56,9 +56,9 @@ static class LevelDifficultyMethods
         switch (d1)
         {
             case LevelDifficulty.Easy:
-                amountOfObjDic["numberOfFish"] = 30;
-                amountOfObjDic["numberOfRainCloud"] = 10;
-                amountOfObjDic["numberOfSunnyCloud"] = 20;
+                amountOfObjDic["numberOfFish"] = 0;
+                amountOfObjDic["numberOfRainCloud"] = 0;
+                amountOfObjDic["numberOfSunnyCloud"] = 0;
                 return amountOfObjDic;
             case LevelDifficulty.Normal:
                 amountOfObjDic["numberOfFish"] = 20;

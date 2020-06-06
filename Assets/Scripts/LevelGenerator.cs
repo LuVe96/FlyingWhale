@@ -6,8 +6,8 @@ public class LevelGenerator : MonoBehaviour
 {
 
     public Transform referenz;
-    public GameObject rainCloud;
-    public GameObject sunnyCloud;
+    public GameObject rainClouds;
+    public GameObject sunnyClouds;
     public GameObject fish;
 
     //public int numberOfFish = 20;
@@ -36,14 +36,16 @@ public class LevelGenerator : MonoBehaviour
 
             if (i < numberOfSunnyCloud)
             {
-                GameObject obj = Instantiate(sunnyCloud, parent);
+                int num = Random.Range(0, 2);
+                GameObject obj = Instantiate(sunnyClouds.transform.GetChild(num).gameObject, parent);
                 obj.transform.position = new Vector3(randomX, randomY, 0);
                 objectPool[i] = obj;
                 obj.GetComponent<Generatedobject>().setReferenz(referenz);
             }
             else if (i < (numberOfRainCloud + numberOfSunnyCloud))
             {
-                GameObject obj = Instantiate(rainCloud, parent);
+                int num = Random.Range(0, 2);
+                GameObject obj = Instantiate(rainClouds, parent);
                 obj.transform.position = new Vector3(randomX, randomY, 0);
                 objectPool[i] = obj;
                 obj.GetComponent<Generatedobject>().setReferenz(referenz);
