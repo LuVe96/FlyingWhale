@@ -57,18 +57,18 @@ static class LevelDifficultyMethods
         {
             case LevelDifficulty.Easy:
                 amountOfObjDic["numberOfFish"] = 30;
-                amountOfObjDic["numberOfRainCloud"] = 0;
-                amountOfObjDic["numberOfSunnyCloud"] = 0;
+                amountOfObjDic["numberOfRainCloud"] = 10;
+                amountOfObjDic["numberOfSunnyCloud"] = 20;
                 return amountOfObjDic;
             case LevelDifficulty.Normal:
-                amountOfObjDic["numberOfFish"] = 0;
-                amountOfObjDic["numberOfRainCloud"] = 30;
-                amountOfObjDic["numberOfSunnyCloud"] = 0;
+                amountOfObjDic["numberOfFish"] = 20;
+                amountOfObjDic["numberOfRainCloud"] = 10;
+                amountOfObjDic["numberOfSunnyCloud"] = 30;
                 return amountOfObjDic;
             case LevelDifficulty.Hard:
-                amountOfObjDic["numberOfFish"] = 0;
-                amountOfObjDic["numberOfRainCloud"] = 0;
-                amountOfObjDic["numberOfSunnyCloud"] = 30;
+                amountOfObjDic["numberOfFish"] = 10;
+                amountOfObjDic["numberOfRainCloud"] = 30;
+                amountOfObjDic["numberOfSunnyCloud"] = 20;
                 return amountOfObjDic; 
             default:
                 return amountOfObjDic;
