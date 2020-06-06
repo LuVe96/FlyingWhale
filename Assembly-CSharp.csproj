@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AnimationCollisionsHandler.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Generatedobject.cs" />
     <Compile Include="Assets\Scripts\HarpuneCreater.cs" />
@@ -73,7 +74,6 @@
     <Compile Include="Assets\Scripts\RepeadableBackground.cs" />
     <Compile Include="Assets\Scripts\Scripts_2\ObjectScrolling.cs" />
     <Compile Include="Assets\Scripts\Scripts_2\WaleMovement.cs" />
-    <Compile Include="Assets\Scripts\WaleCollisionsHandler.cs" />
     <Compile Include="Assets\Scripts\WaleMovement_2.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
