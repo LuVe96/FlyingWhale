@@ -134,12 +134,10 @@ public class WaleMovement_2 : MonoBehaviour
             //hunter.transform.position += new Vector3(1.5f, 0, 0);
 
             GameManager.Instance.PlayerGotSlower(true);
-
         }
 
         if (collision.gameObject.tag == "netz" || collision.gameObject.tag == "harpune(Clone)")
         {
-            Debug.Log("Game over");
             GameManager.Instance.PlayerIsDead();
         }
 
@@ -147,6 +145,11 @@ public class WaleMovement_2 : MonoBehaviour
         {
             GameManager.Instance.PlayerGotFaster();
             Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.tag == "goal")
+        {
+            GameManager.Instance.PlayerHasWon();
         }
 
 
