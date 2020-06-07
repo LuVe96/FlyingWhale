@@ -54,7 +54,7 @@ public class HarpuneShot : MonoBehaviour
         //direction += new Vector3(0, GameManager.Instance.playerOffsetY, 0);
 
         transform.LookAt(pos);
-        transform.Rotate(new Vector3(0, 90, 0));
+        transform.Rotate(new Vector3(0, -90, 0));
         isShooting = true;
     }
 
