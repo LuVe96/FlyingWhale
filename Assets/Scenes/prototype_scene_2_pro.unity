@@ -648,7 +648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnVelocty: 35
-  waleVelocity: 1
+  waleVelocity: 0.5
 --- !u!60 &486933782
 PolygonCollider2D:
   m_ObjectHideFlags: 0

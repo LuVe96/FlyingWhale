@@ -25,8 +25,8 @@ using UnityEngine;
             {
                 case LevelDifficulty.Easy:
                     amountOfObjDic["numberOfFish"] = 50;
-                    amountOfObjDic["numberOfRainCloud"] = 0;
-                    amountOfObjDic["numberOfSunnyCloud"] = 0;
+                    amountOfObjDic["numberOfRainCloud"] = 10;
+                    amountOfObjDic["numberOfSunnyCloud"] = 20;
                     return amountOfObjDic;
                 case LevelDifficulty.Normal:
                     amountOfObjDic["numberOfFish"] = 20;

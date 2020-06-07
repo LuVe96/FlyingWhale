@@ -33,29 +33,32 @@ public class LevelGenerator : MonoBehaviour
         {
             float randomX = Random.Range(-10.0f, 10.0f);
             float randomY = Random.Range(-10.0f, 10.0f);
+            float randomScale = Random.Range(0.5f, 1.5f);
 
             if (i < numberOfSunnyCloud)
             {
                 int num = Random.Range(0, 2);
                 GameObject obj = Instantiate(sunnyClouds.transform.GetChild(num).gameObject, parent);
                 obj.transform.position = new Vector3(randomX, randomY, 0);
+                obj.transform.localScale *= randomScale;
                 objectPool[i] = obj;
-                obj.GetComponent<Generatedobject>().setReferenz(referenz);
+                //obj.GetComponent<Generatedobject>().setReferenz(referenz);
             }
             else if (i < (numberOfRainCloud + numberOfSunnyCloud))
             {
                 int num = Random.Range(0, 2);
                 GameObject obj = Instantiate(rainClouds, parent);
                 obj.transform.position = new Vector3(randomX, randomY, 0);
+                obj.transform.localScale *= randomScale;
                 objectPool[i] = obj;
-                obj.GetComponent<Generatedobject>().setReferenz(referenz);
+                //obj.GetComponent<Generatedobject>().setReferenz(referenz);
             }
             else if (i < numberOfObjects)
             {
                 GameObject obj = Instantiate(fish, parent);
                 obj.transform.position = new Vector3(randomX, randomY, 0);
                 objectPool[i] = obj;
-                obj.GetComponent<Generatedobject>().setReferenz(referenz);
+                //obj.GetComponent<Generatedobject>().setReferenz(referenz);
             }
 
         }

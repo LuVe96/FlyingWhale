@@ -6,7 +6,7 @@ public class WaleMovement_2 : MonoBehaviour
 {
 
     public float turnVelocty = 35;
-    public float waleVelocity = 1f;
+    public float waleVelocity = 0.1f;
     ////public Transform hunter;
 
     private bool isUpPressed = false;
