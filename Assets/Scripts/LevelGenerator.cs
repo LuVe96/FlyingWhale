@@ -23,7 +23,7 @@ public class LevelGenerator : MonoBehaviour
         int numberOfFish = GameManager.Instance.levelDifficulty.getNumberofObj()["numberOfFish"];
         int numberOfRainCloud = GameManager.Instance.levelDifficulty.getNumberofObj()["numberOfRainCloud"];
         int numberOfSunnyCloud = GameManager.Instance.levelDifficulty.getNumberofObj()["numberOfSunnyCloud"];
-        Debug.Log("dif: " + GameManager.Instance.levelDifficulty);
+
         // create Objects
         int numberOfObjects = numberOfFish + numberOfRainCloud + numberOfSunnyCloud;
         objectPool = new GameObject[numberOfObjects];

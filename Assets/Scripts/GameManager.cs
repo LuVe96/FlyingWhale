@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance = null;
 
-    public bool IsGameOver { get; private set; }
+    public bool IsGameOver { get; private set; } = false;
+    public bool IsGameWon { get; private set; } = false;
     public PlayerSpeed playerSpeed { get; private set; } = PlayerSpeed.Normal;
     public LevelDifficulty levelDifficulty { get; private set; } = LevelDifficulty.Easy;
 
@@ -33,6 +34,13 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
         defaultSpeedPeriode = speedPeriode;
+        setupOnStart();
+    }
+
+    void setupOnStart()
+    {
+        IsGameOver  = false;
+        IsGameWon = false;
     }
 
 
@@ -87,7 +95,12 @@ public class GameManager : MonoBehaviour
 
     public void PlayerIsDead()
     {
+        IsGameOver = true;
+    }
 
+    public void PlayerHasWon()
+    {
+        IsGameWon = true;
     }
 
 }

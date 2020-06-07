@@ -25,7 +25,7 @@ public class WaleMovement_2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(GameManager.Instance.playerHorPos);
+
         // horizontal Movement
         if (Input.GetKeyDown(KeyCode.W) || isUpPressed)
         {
