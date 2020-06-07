@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\HarpuneCreater.cs" />
     <Compile Include="Assets\Scripts\HarpuneShot.cs" />
     <Compile Include="Assets\Scripts\HunterMovement.cs" />
+    <Compile Include="Assets\Scripts\LevelDifficultyEnum.cs" />
     <Compile Include="Assets\Scripts\LevelGenerator.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\ObjectScrolling_2.cs" />

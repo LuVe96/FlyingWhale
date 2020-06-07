@@ -55,7 +55,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936c28e9f37524b488bbe63b4f768e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -1.5
+  speed: -1
   waleVelocity: 1
 --- !u!50 &1185089155502247635
 Rigidbody2D:
