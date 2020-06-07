@@ -74,9 +74,13 @@ public class WaleMovement_2 : MonoBehaviour
             }
 
         }
-
-        // vertical movement
-        transform.position += new Vector3(-GameManager.Instance.playerSpeed.GetSpeed() * Time.deltaTime, 0, 0);
+         
+        // vertical movement with limit in the end
+        if (transform.localPosition.x <= 14 || !(GameManager.Instance.playerSpeed == PlayerSpeed.Faster))
+        {   
+            transform.position += new Vector3(-GameManager.Instance.playerSpeed.GetSpeed() * Time.deltaTime, 0, 0);
+        }
+        
 
         //Animations
         if(GameManager.Instance.playerSpeed == PlayerSpeed.Faster)
