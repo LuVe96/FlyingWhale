@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     public bool IsGameOver { get; private set; }
     public PlayerSpeed playerSpeed { get; private set; } = PlayerSpeed.Normal;
     public LevelDifficulty levelDifficulty { get; private set; } = LevelDifficulty.Easy;
+
+    public PlayerHorPos playerHorPos { get; private set; } = PlayerHorPos.Middle;
+
     public float speedPeriode = 1.2f;
     private float defaultSpeedPeriode = 0;
     public bool playerIsInCloud = false;
@@ -76,6 +79,12 @@ public class GameManager : MonoBehaviour
         levelDifficulty = ld;
     }
 
+    public void setPlayerHozPos(PlayerHorPos pos)
+    {
+        playerHorPos = pos;
+    }
+
+
     public void PlayerIsDead()
     {
 
@@ -115,4 +124,11 @@ static class PlayerSpeedMethods
 
         }
     }
+}
+
+public enum PlayerHorPos
+{
+    Top,
+    Middle,
+    Bottom
 }

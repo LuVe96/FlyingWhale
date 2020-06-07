@@ -57,7 +57,7 @@ public class LevelGenerator : MonoBehaviour
                 objectPool[i] = obj;
                 obj.GetComponent<Generatedobject>().setReferenz(referenz);
             }
-      
+
         }
     }
 

@@ -25,14 +25,32 @@ public class WaleMovement_2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(GameManager.Instance.playerHorPos);
         // horizontal Movement
         if (Input.GetKeyDown(KeyCode.W) || isUpPressed)
         {
+           
             if (transform.rotation.z <= 0.25)
             {
                 transform.Rotate(new Vector3(0, 0, turnVelocty * Time.deltaTime));               
             }
-            
+
+            if (GameManager.Instance.playerHorPos == PlayerHorPos.Top)
+            {
+                if(transform.localPosition.y <= 7.8)
+                {
+                    transform.position += new Vector3(0, waleVelocity * Time.deltaTime, 0);
+                }   
+            }
+            if (GameManager.Instance.playerHorPos == PlayerHorPos.Bottom)
+            {
+                transform.position += new Vector3(0, waleVelocity * Time.deltaTime, 0);
+                if (transform.localPosition.y >= 0)
+                {
+                    GameManager.Instance.setPlayerHozPos(PlayerHorPos.Middle);
+                }
+            }
+
 
             isUpPressed = true;
             isNoKeyPressed = false;
@@ -50,7 +68,22 @@ public class WaleMovement_2 : MonoBehaviour
                 transform.Rotate(new Vector3(0, 0, -turnVelocty * Time.deltaTime));
             }
 
-           
+            if (GameManager.Instance.playerHorPos == PlayerHorPos.Bottom)
+            {
+                if (transform.localPosition.y >= -7.8)
+                {
+                    transform.position += new Vector3(0, -waleVelocity * Time.deltaTime, 0);
+                } 
+            }
+            if (GameManager.Instance.playerHorPos == PlayerHorPos.Top)
+            {
+                transform.position += new Vector3(0, -waleVelocity * Time.deltaTime, 0);
+                if (transform.localPosition.y <= 0)
+                {
+                    GameManager.Instance.setPlayerHozPos(PlayerHorPos.Middle);
+                }
+            }
+
             isDownPressed = true;
             isNoKeyPressed = false;
         }

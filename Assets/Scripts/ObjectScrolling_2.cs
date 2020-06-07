@@ -23,12 +23,33 @@ public class ObjectScrolling_2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.W) || isUpPressed)
+        
+        if (Input.GetKeyDown(KeyCode.W) || isUpPressed )
         {
-            transform.position += new Vector3(0, -waleVelocity * Time.deltaTime, 0);
-            //hunters.position -= new Vector3(0, -waleVelocity * Time.deltaTime, 0);
-            isUpPressed = true;  
+            isUpPressed = true;
+
+            if ( gameObject.name == "Background")
+            {
+                if (GetComponent<Transform>().position.y >= -5)
+                {
+                    if (GameManager.Instance.playerHorPos == PlayerHorPos.Middle)
+                    {
+                        transform.position += new Vector3(0, -waleVelocity * Time.deltaTime, 0);
+                        //hunters.position -= new Vector3(0, -waleVelocity * Time.deltaTime, 0);
+                    }
+                }
+                else
+                {
+                    GameManager.Instance.setPlayerHozPos(PlayerHorPos.Top);
+                }
+            }
+            else
+            {
+                transform.position += new Vector3(0, -waleVelocity * Time.deltaTime, 0);
+            }
+
+           
+           
         }
 
         if (Input.GetKeyUp(KeyCode.W))
@@ -37,12 +58,33 @@ public class ObjectScrolling_2 : MonoBehaviour
         }
 
 
-
         if (Input.GetKeyDown(KeyCode.S) || isDownPressed)
         {
-            transform.position += new Vector3(0, waleVelocity * Time.deltaTime, 0);
-            //hunters.position -= new Vector3(0, waleVelocity * Time.deltaTime, 0);
             isDownPressed = true;
+
+            if (gameObject.name == "Background")
+            {
+                if (GetComponent<Transform>().position.y <= 5)
+                {
+                    if (GameManager.Instance.playerHorPos == PlayerHorPos.Middle)
+                    {
+                        transform.position += new Vector3(0, waleVelocity * Time.deltaTime, 0);
+                        //hunters.position -= new Vector3(0, waleVelocity * Time.deltaTime, 0);          
+                    }
+
+                }
+                else
+                {
+                    GameManager.Instance.setPlayerHozPos(PlayerHorPos.Bottom);
+                }
+            }
+            else
+            {
+                transform.position += new Vector3(0, waleVelocity * Time.deltaTime, 0);
+            }
+
+            
+                
         }
 
         if (Input.GetKeyUp(KeyCode.S))

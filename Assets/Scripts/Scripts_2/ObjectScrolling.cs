@@ -23,8 +23,8 @@ public class ObjectScrolling : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.W) || isUpPressed)
+        
+        if ((Input.GetKeyDown(KeyCode.W) || isUpPressed) && transform.localPosition.y >= -5 )
         {
             transform.position += new Vector3(0, -waleVelocity * Time.deltaTime, 0);
             //hunters.position -= new Vector3(0, -waleVelocity * Time.deltaTime, 0);
@@ -35,8 +35,6 @@ public class ObjectScrolling : MonoBehaviour
         {
             isUpPressed = false;
         }
-
-
 
         if (Input.GetKeyDown(KeyCode.S) || isDownPressed)
         {
