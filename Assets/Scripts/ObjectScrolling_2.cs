@@ -45,7 +45,11 @@ public class ObjectScrolling_2 : MonoBehaviour
             }
             else
             {
-                transform.position += new Vector3(0, -waleVelocity * Time.deltaTime, 0);
+                if (GameManager.Instance.playerHorPos == PlayerHorPos.Middle)
+                {
+                    transform.position += new Vector3(0, -waleVelocity * Time.deltaTime, 0);
+                    //hunters.position -= new Vector3(0, -waleVelocity * Time.deltaTime, 0);
+                }
             }
 
            
@@ -80,7 +84,11 @@ public class ObjectScrolling_2 : MonoBehaviour
             }
             else
             {
-                transform.position += new Vector3(0, waleVelocity * Time.deltaTime, 0);
+                if (GameManager.Instance.playerHorPos == PlayerHorPos.Middle)
+                {
+                    transform.position += new Vector3(0, waleVelocity * Time.deltaTime, 0);
+                    //hunters.position -= new Vector3(0, waleVelocity * Time.deltaTime, 0);          
+                }
             }
 
             

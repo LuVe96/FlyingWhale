@@ -19,7 +19,6 @@ public class MenuHandler : MonoBehaviour
         statsText = pauseMenu.transform.GetChild(1).gameObject;
         resumRetryButton = pauseMenu.transform.GetChild(2).gameObject;
         exitToMenuButton = pauseMenu.transform.GetChild(3).gameObject;
-        GameManager.Instance.setupOnStart();
         Resume();
         
     }
