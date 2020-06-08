@@ -19,6 +19,12 @@ public class GameManager : MonoBehaviour
     private float defaultSpeedPeriode = 0;
     public bool playerIsInCloud = false;
 
+    public int statsFish { get; private set; } = 0;
+    public int statsHarpune { get; private set; } = 0;
+    public int statsRainCloud { get; private set; } = 0;
+    public int statsSunnCloud { get; private set; } = 0;
+
+
 
     private float time0Sum = 0;
 
@@ -34,19 +40,24 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
         defaultSpeedPeriode = speedPeriode;
-        setupOnStart();
     }
 
-    void setupOnStart()
+    public void setupOnStart()
     {
         IsGameOver  = false;
         IsGameWon = false;
-    }
 
+        statsFish = 0;
+        statsHarpune  = 0;
+        statsRainCloud  = 0;
+        statsSunnCloud  = 0;
+        Debug.Log(GameManager.Instance.IsGameWon);
+    }
 
     // Update is called once per frame
     void Update()
-    {
+    { 
+
         time0Sum += Time.deltaTime;
         if (time0Sum >= speedPeriode)
         {
@@ -82,6 +93,18 @@ public class GameManager : MonoBehaviour
         time0Sum = 0;
     }
 
+    public void setStatsFor(string stat)
+    {
+        switch (stat)
+        {
+            case "statsFish": statsFish++; break;
+            case "statsHarpune" : statsHarpune++; break;
+            case "statsRainCloud" : statsRainCloud++; break;
+            case "statsSunnCloud": statsSunnCloud++; break;
+            default: return;
+        }
+    }
+
     public void setLevelDificulty(LevelDifficulty ld)
     {
         levelDifficulty = ld;
@@ -92,7 +115,6 @@ public class GameManager : MonoBehaviour
         playerHorPos = pos;
     }
 
-
     public void PlayerIsDead()
     {
         IsGameOver = true;
@@ -102,7 +124,6 @@ public class GameManager : MonoBehaviour
     {
         IsGameWon = true;
     }
-
 }
 
 

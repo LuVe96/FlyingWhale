@@ -19,7 +19,9 @@ public class MenuHandler : MonoBehaviour
         statsText = pauseMenu.transform.GetChild(1).gameObject;
         resumRetryButton = pauseMenu.transform.GetChild(2).gameObject;
         exitToMenuButton = pauseMenu.transform.GetChild(3).gameObject;
+        GameManager.Instance.setupOnStart();
         Resume();
+        
     }
 
     void Update()
@@ -40,15 +42,21 @@ public class MenuHandler : MonoBehaviour
 
         if (GameManager.Instance.IsGameOver)
         {
-            resumRetryButton.SetActive(true);
-            resumRetryButton.transform.GetChild(0).GetComponent<Text>().text = "Restart";
             PauseGame();
+            resumRetryButton.SetActive(true);
+            mainText.GetComponent<Text>().text = "Game Over";
+            statsText.GetComponent<Text>().text = createStatsText();
+            resumRetryButton.transform.GetChild(0).GetComponent<Text>().text = "Restart";
+            
         }
 
         if (GameManager.Instance.IsGameWon)
         {
-            resumRetryButton.SetActive(false);
             PauseGame();
+            resumRetryButton.SetActive(false);
+            mainText.GetComponent<Text>().text = "You have won";
+            statsText.GetComponent<Text>().text = createStatsText();
+            
         }
     }
 
@@ -61,9 +69,26 @@ public class MenuHandler : MonoBehaviour
 
     void PauseGame()
     {
+        mainText.GetComponent<Text>().text = "Pause";
+        statsText.GetComponent<Text>().text = createStatsText();
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         gameIsPaused = true;
+    }
+
+    string createStatsText()
+    {
+        string text = "";
+        int fish = GameManager.Instance.statsFish;
+        int harpunes = GameManager.Instance.statsHarpune;
+        int rainClouds = GameManager.Instance.statsRainCloud;
+        int sunClouds = GameManager.Instance.statsSunnCloud;
+
+         text = string.Format("Your Stats: \n\n" +
+                "Shot by Harpunes: {0} \nFish eaten: {1} \nFlown through Sun Clouds: {2} \nFlown through Rain Clouds: {3}. "
+                , harpunes, fish, sunClouds, rainClouds);
+
+        return text;
     }
 
     public void ExitToMenuButtonPressed()
@@ -75,9 +100,7 @@ public class MenuHandler : MonoBehaviour
     {
         if (gameIsPaused)
         {
-            pauseMenu.SetActive(false);
-            Time.timeScale = 1f;
-            gameIsPaused = false;
+            Resume();
         }
         else if (GameManager.Instance.IsGameOver)
         {

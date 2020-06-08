@@ -132,7 +132,7 @@ public class WaleMovement_2 : MonoBehaviour
         if (collision.gameObject.tag == "harpune" || collision.gameObject.tag == "harpune(Clone)")
         {
             //hunter.transform.position += new Vector3(1.5f, 0, 0);
-
+            GameManager.Instance.setStatsFor("statsHarpune");
             GameManager.Instance.PlayerGotSlower(true);
         }
 
@@ -143,6 +143,7 @@ public class WaleMovement_2 : MonoBehaviour
 
         if (collision.gameObject.tag == "fish")
         {
+            GameManager.Instance.setStatsFor("statsFish");
             GameManager.Instance.PlayerGotFaster();
             Destroy(collision.gameObject);
         }
@@ -152,6 +153,14 @@ public class WaleMovement_2 : MonoBehaviour
             GameManager.Instance.PlayerHasWon();
         }
 
+        if (collision.gameObject.tag == "rainCloud")
+        {
+            GameManager.Instance.setStatsFor("statsRainCloud");
+        }
+        if (collision.gameObject.tag == "sunnyCloud")
+        {
+            GameManager.Instance.setStatsFor("statsSunnCloud");
+        }
 
     }
 
