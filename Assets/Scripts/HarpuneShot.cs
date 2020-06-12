@@ -14,11 +14,12 @@ public class HarpuneShot : MonoBehaviour
     private bool isShooting = false;
     private float timeSum = 0;
 
-  
+    private AudioSource shot;
 
     private void Awake()
     {
         wale = GameObject.Find("wal").transform;
+        shot = this.GetComponent<AudioSource>();
 
     }
 
@@ -27,6 +28,7 @@ public class HarpuneShot : MonoBehaviour
     {
         if (isShooting)
         {
+            
             transform.position += direction * velocity * Time.deltaTime;
             timeSum += Time.deltaTime;
 
@@ -40,7 +42,7 @@ public class HarpuneShot : MonoBehaviour
 
     public void Shot()
     {
-
+        shot.Play();
         //random position near wale
         float randomNumber = Random.Range(-0.8f, 0.8f);
         //Transform modWale = wale;

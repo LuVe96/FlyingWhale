@@ -24,12 +24,19 @@ public class GameManager : MonoBehaviour
     public int statsRainCloud { get; private set; } = 0;
     public int statsSunnCloud { get; private set; } = 0;
 
-
+    private AudioSource backgroundAudio;
+    private WhaleArea whaleInArea  = WhaleArea.Middle;
+    private WhaleArea currentWhaleInArea;
+    public AudioClip clipNear;
+    public AudioClip clipMiddle;
+    public AudioClip clipAway;
 
     private float time0Sum = 0;
 
     private void Awake()
     {
+        backgroundAudio = this.GetComponent<AudioSource>(); 
+        backgroundAudio.Play();
         if (Instance == null)
         {
             Instance = this;
@@ -66,6 +73,29 @@ public class GameManager : MonoBehaviour
             time0Sum = 0;
         }
         
+        if(whaleInArea == WhaleArea.Near && currentWhaleInArea != WhaleArea.Near)
+        {
+            backgroundAudio.Pause();
+            backgroundAudio.clip = clipNear;
+            currentWhaleInArea = WhaleArea.Near;
+            backgroundAudio.Play();
+            Debug.Log("Near");
+        }
+        else if (whaleInArea == WhaleArea.Away && currentWhaleInArea != WhaleArea.Away)
+        {
+            backgroundAudio.Pause();
+            backgroundAudio.clip = clipAway;
+            currentWhaleInArea = WhaleArea.Away;
+            backgroundAudio.Play();
+        }
+        else if (whaleInArea == WhaleArea.Middle && currentWhaleInArea != WhaleArea.Middle)
+        {
+            Debug.Log("Middle");
+            backgroundAudio.Pause();
+            backgroundAudio.clip = clipMiddle;
+            currentWhaleInArea = WhaleArea.Middle;
+            backgroundAudio.Play();
+        }
     }
 
     public void PlayerGotSlower(bool isHarpune, PlayerSpeed speed = PlayerSpeed.Slower)
@@ -118,11 +148,19 @@ public class GameManager : MonoBehaviour
     public void PlayerIsDead()
     {
         IsGameOver = true;
+        backgroundAudio.Stop();
     }
 
     public void PlayerHasWon()
     {
         IsGameWon = true;
+        backgroundAudio.Stop();
+    }
+
+    public void setWhaleInArea(WhaleArea area)
+    {
+        whaleInArea = area;
+
     }
 }
 
@@ -165,4 +203,11 @@ public enum PlayerHorPos
     Top,
     Middle,
     Bottom
+}
+
+public enum WhaleArea
+{
+    Near,
+    Middle,
+    Away
 }

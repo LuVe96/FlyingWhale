@@ -13,6 +13,10 @@ public class WaleMovement_2 : MonoBehaviour
     private bool isDownPressed = false;
     private bool isNoKeyPressed = true;
     private Animator animator;
+    private AudioSource whaleshot;
+    private AudioSource rainCloud;
+    private AudioSource sunnyCloud;
+    private AudioSource fish;
 
 
 
@@ -20,6 +24,12 @@ public class WaleMovement_2 : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+       
+        AudioSource[] audios = GetComponents<AudioSource>();
+        whaleshot = audios[0];
+        rainCloud = audios[1];
+        sunnyCloud = audios[2];
+        fish = audios[3];
     }
 
     // Update is called once per frame
@@ -124,6 +134,20 @@ public class WaleMovement_2 : MonoBehaviour
         {
             animator.speed = 1f;
         }
+
+        if(transform.localPosition.x < -5)
+        {
+            GameManager.Instance.setWhaleInArea(WhaleArea.Near);
+        }
+        else if (transform.localPosition.x > 7)
+        {
+            GameManager.Instance.setWhaleInArea(WhaleArea.Away);
+        }
+        else
+        {
+            GameManager.Instance.setWhaleInArea(WhaleArea.Middle);
+        }
+
     }
 
 
@@ -134,6 +158,8 @@ public class WaleMovement_2 : MonoBehaviour
             //hunter.transform.position += new Vector3(1.5f, 0, 0);
             GameManager.Instance.setStatsFor("statsHarpune");
             GameManager.Instance.PlayerGotSlower(true);
+            whaleshot.Play();
+            
         }
 
         if (collision.gameObject.tag == "netz" || collision.gameObject.tag == "harpune(Clone)")
@@ -146,6 +172,7 @@ public class WaleMovement_2 : MonoBehaviour
             GameManager.Instance.setStatsFor("statsFish");
             GameManager.Instance.PlayerGotFaster();
             Destroy(collision.gameObject);
+            fish.Play();
         }
 
         if (collision.gameObject.tag == "goal")
@@ -156,10 +183,12 @@ public class WaleMovement_2 : MonoBehaviour
         if (collision.gameObject.tag == "rainCloud")
         {
             GameManager.Instance.setStatsFor("statsRainCloud");
+            rainCloud.Play();
         }
         if (collision.gameObject.tag == "sunnyCloud")
         {
             GameManager.Instance.setStatsFor("statsSunnCloud");
+            sunnyCloud.Play();
         }
 
     }

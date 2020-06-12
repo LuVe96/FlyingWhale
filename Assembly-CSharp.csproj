@@ -65,7 +65,6 @@
     <Compile Include="Assets\Collider2D Optimization\EdgeColliderOptimizer.cs" />
     <Compile Include="Assets\Collider2D Optimization\PolygonColliderOptimizer.cs" />
     <Compile Include="Assets\Collider2D Optimization\ShapeOptimizationHelper.cs" />
-    <Compile Include="Assets\OnStart.cs" />
     <Compile Include="Assets\Scripts\AnimationCollisionsHandler.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Generatedobject.cs" />
@@ -77,6 +76,7 @@
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\MenuHandler.cs" />
     <Compile Include="Assets\Scripts\ObjectScrolling_2.cs" />
+    <Compile Include="Assets\Scripts\OnStart.cs" />
     <Compile Include="Assets\Scripts\RepeadableBackground.cs" />
     <Compile Include="Assets\Scripts\Scripts_2\ObjectScrolling.cs" />
     <Compile Include="Assets\Scripts\Scripts_2\WaleMovement.cs" />
