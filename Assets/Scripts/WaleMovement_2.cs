@@ -159,6 +159,7 @@ public class WaleMovement_2 : MonoBehaviour
             GameManager.Instance.setStatsFor("statsHarpune");
             GameManager.Instance.PlayerGotSlower(true);
             whaleshot.Play();
+            Destroy(collision.gameObject);
             
         }
 
@@ -180,17 +181,21 @@ public class WaleMovement_2 : MonoBehaviour
             GameManager.Instance.PlayerHasWon();
         }
 
-        if (collision.gameObject.tag == "rainCloud")
+        if( collision.tag == "rainCloudOneTimeCollider")
         {
+            collision.GetComponent<PolygonCollider2D>().enabled = false;
             GameManager.Instance.setStatsFor("statsRainCloud");
             rainCloud.Play();
         }
-        if (collision.gameObject.tag == "sunnyCloud")
+
+        if (collision.tag == "sunnyCloudOneTimeCollider")
         {
+            collision.GetComponent<PolygonCollider2D>().enabled = false;
             GameManager.Instance.setStatsFor("statsSunnCloud");
             sunnyCloud.Play();
         }
 
+       
     }
 
     private void OnTriggerStay2D(Collider2D collision)

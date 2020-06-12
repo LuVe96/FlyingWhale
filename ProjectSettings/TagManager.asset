@@ -10,6 +10,8 @@ TagManager:
   - sunnyCloud
   - fish
   - goal
+  - rainCloudOneTimeCollider
+  - sunnyCloudOneTimeCollider
   layers:
   - Default
   - TransparentFX

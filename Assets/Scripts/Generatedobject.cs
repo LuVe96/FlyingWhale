@@ -25,6 +25,7 @@ public class Generatedobject : MonoBehaviour
             float randomX = Random.Range(10.0f, 20.0f);
             float randomY = Random.Range(-10.0f, 10.0f);
             transform.position = new Vector3(randomX, randomY + referenz.position.y, 0);
+            transform.GetChild(0).GetComponent<PolygonCollider2D>().enabled = true;
         }
     }
 }

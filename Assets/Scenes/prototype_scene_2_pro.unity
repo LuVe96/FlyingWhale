@@ -548,6 +548,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedPeriode: 1.2
   playerIsInCloud: 0
+  clipNear: {fileID: 8300000, guid: a8c3ac6fa61cda94781f1246fa422744, type: 3}
+  clipMiddle: {fileID: 8300000, guid: 8f0a586152e638741b1d73b04951a91d, type: 3}
+  clipAway: {fileID: 8300000, guid: 3ee40c4487ac6fa489a94b3cde5b12d6, type: 3}
 --- !u!4 &452749609
 Transform:
   m_ObjectHideFlags: 0
@@ -827,7 +830,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486933777}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.11, y: 0, z: 0}
   m_LocalScale: {x: 0.20448, y: 0.20448, z: 0}
   m_Children: []
   m_Father: {fileID: 68887200}
@@ -2663,7 +2666,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6194213abdfb9114f9c89521a92da528, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
