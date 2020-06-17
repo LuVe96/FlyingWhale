@@ -16,8 +16,6 @@ public class GeneratedTile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(transform.position.y);
-
         if (transform.position.x <= 0 && !createNextCalled)
         {
             GameManager.Instance.setCreateNextTile(true);

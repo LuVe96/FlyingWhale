@@ -8,7 +8,8 @@ using UnityEngine;
     {
         Easy,
         Normal,
-        Hard
+        Hard,
+        End
     }
 
     // extension für enum: PlayerSpeed
@@ -38,7 +39,12 @@ using UnityEngine;
                     amountOfObjDic["numberOfRainCloud"] = 30;
                     amountOfObjDic["numberOfSunnyCloud"] = 20;
                     return amountOfObjDic;
-                default:
+            case LevelDifficulty.End:
+                amountOfObjDic["numberOfFish"] = 0;
+                amountOfObjDic["numberOfRainCloud"] = 0;
+                amountOfObjDic["numberOfSunnyCloud"] = 0;
+                return amountOfObjDic;
+            default:
                     return amountOfObjDic;
 
             }

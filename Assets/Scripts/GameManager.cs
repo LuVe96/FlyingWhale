@@ -15,10 +15,12 @@ public class GameManager : MonoBehaviour
 
     public PlayerHorPos playerHorPos { get; private set; } = PlayerHorPos.Middle;
     public bool createNextTile { get; private set; } = false;
+    private float dificultyTimeSum = 0;
+    public float timeForEachDificulty = 60;
 
     public float speedPeriode = 1.2f;
     private float defaultSpeedPeriode = 0;
-    public bool playerIsInCloud = false;
+    public bool playerIsInCloud { get; private set; } = false;
 
     public int statsFish { get; private set; } = 0;
     public int statsHarpune { get; private set; } = 0;
@@ -97,6 +99,9 @@ public class GameManager : MonoBehaviour
             currentWhaleInArea = WhaleArea.Middle;
             backgroundAudio.Play();
         }
+
+        dificultyTimeSum += Time.deltaTime;
+        setLevelDificulty(dificultyTimeSum);
     }
 
     public void PlayerGotSlower(bool isHarpune, PlayerSpeed speed = PlayerSpeed.Slower)
@@ -136,9 +141,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void setLevelDificulty(LevelDifficulty ld)
+    void setLevelDificulty(float timeSum)
     {
-        levelDifficulty = ld;
+        if (timeSum >= timeForEachDificulty * 3)
+        {
+            levelDifficulty = LevelDifficulty.End;
+        }
+        else if(timeSum >= timeForEachDificulty * 2)
+        {
+            levelDifficulty = LevelDifficulty.Hard;
+        }
+        else if(timeSum >= timeForEachDificulty)
+        {
+            levelDifficulty = LevelDifficulty.Normal;
+        }
+        else
+        {
+            levelDifficulty = LevelDifficulty.Easy;
+        }
     }
 
     public void setPlayerHozPos(PlayerHorPos pos)

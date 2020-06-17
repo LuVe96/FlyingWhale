@@ -9174,9 +9174,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5268376806798342289}
-  - component: {fileID: 5268376806798342288}
   - component: {fileID: 5268376806798342287}
-  - component: {fileID: 5268376806798342286}
+  - component: {fileID: -964540259950488483}
+  - component: {fileID: 6040689626361822006}
+  - component: {fileID: 551079150657978674}
   m_Layer: 0
   m_Name: GoalClouds
   m_TagString: goal
@@ -9252,20 +9253,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5268376806798342288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5268376806798342285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 936c28e9f37524b488bbe63b4f768e61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: -1.5
-  waleVelocity: 1
 --- !u!61 &5268376806798342287
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9292,7 +9279,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 19.129395, y: 20.091995}
   m_EdgeRadius: 0
---- !u!50 &5268376806798342286
+--- !u!50 &-964540259950488483
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -9313,6 +9300,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6040689626361822006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5268376806798342285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 936c28e9f37524b488bbe63b4f768e61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -1.5
+  waleVelocity: 1
+--- !u!114 &551079150657978674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5268376806798342285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee028b1e18f41ac46861c3bc7673746c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5268376806798432183
 GameObject:
   m_ObjectHideFlags: 0
