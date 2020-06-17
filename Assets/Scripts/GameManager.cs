@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public LevelDifficulty levelDifficulty { get; private set; } = LevelDifficulty.Easy;
 
     public PlayerHorPos playerHorPos { get; private set; } = PlayerHorPos.Middle;
+    public bool createNextTile { get; private set; } = false;
 
     public float speedPeriode = 1.2f;
     private float defaultSpeedPeriode = 0;
@@ -161,6 +162,11 @@ public class GameManager : MonoBehaviour
     {
         whaleInArea = area;
 
+    }
+
+    public void setCreateNextTile(bool create)
+    {
+        createNextTile = create;
     }
 }
 

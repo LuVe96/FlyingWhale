@@ -58,6 +58,7 @@ public class WaleMovement_2 : MonoBehaviour
                 if (transform.localPosition.y >= 0)
                 {
                     GameManager.Instance.setPlayerHozPos(PlayerHorPos.Middle);
+ 
                 }
             }
 

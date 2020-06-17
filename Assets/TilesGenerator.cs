@@ -14,16 +14,26 @@ public class TilesGenerator : MonoBehaviour
     void Start()
     {
         numEasyTiles = easyTiles.transform.childCount;
+        createTile(numEasyTiles, easyTiles);
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        int num = Random.Range(0, numEasyTiles - 1);
-        float randomY = Random.Range(-5, 5);
-        GameObject obj = Instantiate(easyTiles.transform.GetChild(num).gameObject);
-        obj.transform.position = new Vector3(30, randomY, 0);
+        if (GameManager.Instance.createNextTile)
+        {
+            createTile(numEasyTiles, easyTiles);
+            GameManager.Instance.setCreateNextTile(false);
+        }
 
+    }
+
+    void createTile(int numTiles, GameObject TilesSet)
+    {
+        int num = Random.Range(0, numTiles - 1);
+        float randomY = Random.Range(-5, 5);
+        GameObject obj = Instantiate(TilesSet.transform.GetChild(num).gameObject);
+        obj.transform.position = new Vector3(30, randomY, 0);
     }
 }
