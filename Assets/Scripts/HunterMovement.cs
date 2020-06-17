@@ -4,20 +4,14 @@ using UnityEngine;
 
 public class HunterMovement : MonoBehaviour
 {
+
+    public Transform whale;
+
     // Update is called once per frame
     void Update()
     {
-        PlayerSpeed pss = PlayerSpeed.Slower;
-        if (GameManager.Instance.playerSpeed  == pss )
-        {
-            transform.position += new Vector3(pss.GetSpeed() * Time.deltaTime, 0, 0);
-        }
-
-        PlayerSpeed psSun = PlayerSpeed.SunSlower;
-        if (GameManager.Instance.playerSpeed == psSun)
-        {
-            transform.position += new Vector3(psSun.GetSpeed() * Time.deltaTime, 0, 0);
-        }
+        float differenz_y = whale.transform.position.y - transform.position.y;
+        transform.position += new Vector3(0, differenz_y * Random.Range(0.001f, 0.008f), 0);
 
     }
 }
