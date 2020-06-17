@@ -23,7 +23,6 @@ public class AnimationCollisionsHandler : MonoBehaviour
 
     public void SetColliderForSprite(int spriteNum)
     {
-        Debug.Log("SpriteNum: " + spriteNum + " at: " + gameObject.name + " count: " + colliders.Length);
         colliders[currentColliderIndex].enabled = false;
         currentColliderIndex = spriteNum;
         colliders[currentColliderIndex].enabled = true;
