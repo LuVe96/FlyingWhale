@@ -34,6 +34,6 @@ public class TilesGenerator : MonoBehaviour
         int num = Random.Range(0, numTiles - 1);
         float randomY = Random.Range(-5, 5);
         GameObject obj = Instantiate(TilesSet.transform.GetChild(num).gameObject);
-        obj.transform.position = new Vector3(30, randomY, 0);
+        obj.transform.position = new Vector3(30, randomY + referenz.position.y, 0);
     }
 }
