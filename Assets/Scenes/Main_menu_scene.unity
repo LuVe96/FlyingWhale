@@ -493,8 +493,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d7b02b454c19224d84c2c9a875c0d72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeForEachDificulty: 60
   speedPeriode: 1.2
-  playerIsInCloud: 0
+  clipNear: {fileID: 8300000, guid: a8c3ac6fa61cda94781f1246fa422744, type: 3}
+  clipMiddle: {fileID: 8300000, guid: 8f0a586152e638741b1d73b04951a91d, type: 3}
+  clipAway: {fileID: 8300000, guid: 3ee40c4487ac6fa489a94b3cde5b12d6, type: 3}
 --- !u!4 &452749609
 Transform:
   m_ObjectHideFlags: 0
