@@ -65,6 +65,7 @@
     <Compile Include="Assets\Collider2D Optimization\EdgeColliderOptimizer.cs" />
     <Compile Include="Assets\Collider2D Optimization\PolygonColliderOptimizer.cs" />
     <Compile Include="Assets\Collider2D Optimization\ShapeOptimizationHelper.cs" />
+    <Compile Include="Assets\GeneratedTile.cs" />
     <Compile Include="Assets\Scripts\AnimationCollisionsHandler.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Generatedobject.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Assets\Scripts\Scripts_2\ObjectScrolling.cs" />
     <Compile Include="Assets\Scripts\Scripts_2\WaleMovement.cs" />
     <Compile Include="Assets\Scripts\WaleMovement_2.cs" />
+    <Compile Include="Assets\TilesGenerator.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
