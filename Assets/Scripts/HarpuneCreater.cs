@@ -49,7 +49,7 @@ public class HarpuneCreater : MonoBehaviour
 
             GameObject newHarpune = Instantiate(Harpune);
             newHarpune.transform.position = hunter.transform.position;
-            //newHarpune.transform.localScale *= 0.15f;
+            newHarpune.transform.localScale *= 1.5f;
             HarpuneShot hp = newHarpune.GetComponent<HarpuneShot>();
             hp.Shot();
 
