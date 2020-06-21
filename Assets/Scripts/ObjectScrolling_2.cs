@@ -24,7 +24,7 @@ public class ObjectScrolling_2 : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.W) || isUpPressed )
+        if (Input.GetKey(KeyCode.W) )
         {
             isUpPressed = true;
 
@@ -56,13 +56,7 @@ public class ObjectScrolling_2 : MonoBehaviour
            
         }
 
-        if (Input.GetKeyUp(KeyCode.W))
-        {
-            isUpPressed = false;
-        }
-
-
-        if (Input.GetKeyDown(KeyCode.S) || isDownPressed)
+        if (Input.GetKey(KeyCode.S) )
         {
             isDownPressed = true;
 
@@ -93,11 +87,6 @@ public class ObjectScrolling_2 : MonoBehaviour
 
             
                 
-        }
-
-        if (Input.GetKeyUp(KeyCode.S))
-        {
-            isDownPressed = false;
         }
 
         //this.transform.position += new Vector3(speed * Time.deltaTime, 0f, 0f);

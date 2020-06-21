@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 568526394007217651}
   - component: {fileID: 4697856327707861336}
   - component: {fileID: 634710321299688498}
-  - component: {fileID: 4753934627493229799}
   - component: {fileID: 1855964840}
   - component: {fileID: 1776272065}
+  - component: {fileID: 1108078559235680782}
   m_Layer: 0
   m_Name: harpune
   m_TagString: harpune
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73fa3e3cc00e730498bbc9e3a7d0958f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 0.7
+  velocity: 0.4
   timeDeletion: 3
 --- !u!61 &4697856327707861336
 BoxCollider2D:
@@ -211,20 +211,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4753934627493229799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568526394007217649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a21ba7c543df327438230526594e4d74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  waleVelocity: 1
 --- !u!212 &1855964840
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -371,3 +357,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1108078559235680782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568526394007217649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 936c28e9f37524b488bbe63b4f768e61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  waleVelocity: 1

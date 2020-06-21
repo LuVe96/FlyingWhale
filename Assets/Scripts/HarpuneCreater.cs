@@ -13,14 +13,14 @@ public class HarpuneCreater : MonoBehaviour
     private bool isThreeShot = true;
     private float threeShotTimeSum = 0;
     private int threeShotShots = 0;
-   
 
+    private Transform referenz;
+    private float currentRefPos;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        spawnTime -= 0.5f;
+        referenz = GameObject.Find("MovingObjectReferenz").transform; 
+      spawnTime -= 0.5f;
     }
 
     // Update is called once per frame
@@ -46,12 +46,17 @@ public class HarpuneCreater : MonoBehaviour
         {
             threeShotTimeSum = 0;
             threeShotShots++;
+            if(threeShotShots == 1)
+            {
+                currentRefPos = referenz.position.y;
+
+            }
 
             GameObject newHarpune = Instantiate(Harpune);
             newHarpune.transform.position = hunter.transform.position;
-            newHarpune.transform.localScale *= 1.5f;
-            HarpuneShot hp = newHarpune.GetComponent<HarpuneShot>();
-            hp.Shot();
+            newHarpune.transform.localScale *= 1.3f;
+            HarpuneShot hp = newHarpune.GetComponent<HarpuneShot>();          
+            hp.Shot(currentRefPos - referenz.position.y);
 
             if(threeShotShots >= 3)
             {

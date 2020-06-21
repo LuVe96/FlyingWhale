@@ -9,7 +9,6 @@ public class HarpuneShot : MonoBehaviour
     public float velocity;
     public float timeDeletion = 2;
     private Vector3 direction;
-   
 
     private bool isShooting = false;
     private float timeSum = 0;
@@ -37,17 +36,25 @@ public class HarpuneShot : MonoBehaviour
                 ResetShot();
             }
         }
+
+        if(GameManager.Instance.playerHorPos == PlayerHorPos.Top || GameManager.Instance.playerHorPos == PlayerHorPos.Bottom){
+            gameObject.GetComponent<ObjectScrolling_2>().enabled = false;
+        }
+        else
+        {
+            gameObject.GetComponent<ObjectScrolling_2>().enabled = true;
+        }
         
     }
 
-    public void Shot()
+    public void Shot(float adjustRefY)
     {
         shot.Play();
         //random position near wale
         float randomNumber = Random.Range(-0.8f, 0.8f);
         //Transform modWale = wale;
         //modWale.position += new Vector3(0.2f, randomNumber, 0);
-        Vector3 pos = wale.position + new Vector3(1f, randomNumber, 0);
+        Vector3 pos = wale.position + new Vector3(1f, adjustRefY + randomNumber, 0);
 
         //shoting direction by position
         direction = pos - transform.position;
