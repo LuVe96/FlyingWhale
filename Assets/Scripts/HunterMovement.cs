@@ -11,7 +11,7 @@ public class HunterMovement : MonoBehaviour
     void Update()
     {
         float differenz_y = whale.transform.position.y - transform.position.y;
-        transform.position += new Vector3(0, differenz_y * Random.Range(0.001f, 0.008f), 0);
+        transform.position += new Vector3(0, 3 + differenz_y * Random.Range(0.001f, 0.008f), 0);
 
     }
 }
