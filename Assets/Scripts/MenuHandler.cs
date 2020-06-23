@@ -6,19 +6,29 @@ using UnityEngine.UI;
 public class MenuHandler : MonoBehaviour
 {
     static bool gameIsPaused = false;
-    public GameObject pauseMenu;
+    public GameObject menu;
 
-    private GameObject mainText;
-    private GameObject statsText;
+    public Sprite gameOverImage;
+    public Sprite pauseImage;
+    public Sprite wonImage;
+
+    private GameObject statsText_f;
+    private GameObject statsText_h;
+    private GameObject statsText_sc;
+    private GameObject statsText_rc;
+
     private GameObject resumRetryButton;
     private GameObject exitToMenuButton;
 
     private void Start()
     {
-        mainText = pauseMenu.transform.GetChild(0).gameObject;
-        statsText = pauseMenu.transform.GetChild(1).gameObject;
-        resumRetryButton = pauseMenu.transform.GetChild(2).gameObject;
-        exitToMenuButton = pauseMenu.transform.GetChild(3).gameObject;
+        statsText_h = menu.transform.GetChild(0).gameObject;
+        statsText_f = menu.transform.GetChild(1).gameObject;
+        statsText_sc = menu.transform.GetChild(2).gameObject;
+        statsText_rc = menu.transform.GetChild(3).gameObject;
+
+        resumRetryButton = menu.transform.GetChild(4).gameObject;
+        exitToMenuButton = menu.transform.GetChild(5).gameObject;
         GameManager.Instance.setupOnStart();
         Resume();
         
@@ -44,8 +54,9 @@ public class MenuHandler : MonoBehaviour
         {
             PauseGame();
             resumRetryButton.SetActive(true);
-            mainText.GetComponent<Text>().text = "Game Over";
-            statsText.GetComponent<Text>().text = createStatsText();
+            menu.GetComponent<Image>().sprite = gameOverImage;
+            //mainText.GetComponent<Text>().text = "Game Over";
+            createStatsText();
             resumRetryButton.transform.GetChild(0).GetComponent<Text>().text = "Restart";
             
         }
@@ -54,41 +65,47 @@ public class MenuHandler : MonoBehaviour
         {
             PauseGame();
             resumRetryButton.SetActive(false);
-            mainText.GetComponent<Text>().text = "You have won";
-            statsText.GetComponent<Text>().text = createStatsText();
+            menu.GetComponent<Image>().sprite = wonImage;
+            //mainText.GetComponent<Text>().text = "You have won";
+             createStatsText();
             
         }
     }
 
     void Resume()
     {
-        pauseMenu.SetActive(false);
+        menu.SetActive(false);
         Time.timeScale = 1f;
         gameIsPaused = false;
     }
 
     void PauseGame()
     {
-        mainText.GetComponent<Text>().text = "Pause";
-        statsText.GetComponent<Text>().text = createStatsText();
-        pauseMenu.SetActive(true);
+        //mainText.GetComponent<Text>().text = "Pause";
+        menu.GetComponent<Image>().sprite = pauseImage;
+        createStatsText();
+        menu.SetActive(true);
         Time.timeScale = 0f;
         gameIsPaused = true;
     }
 
-    string createStatsText()
+    void createStatsText()
     {
-        string text = "";
+        //string text = "";
         int fish = GameManager.Instance.statsFish;
         int harpunes = GameManager.Instance.statsHarpune;
         int rainClouds = GameManager.Instance.statsRainCloud;
         int sunClouds = GameManager.Instance.statsSunnCloud;
 
-         text = string.Format("Your Stats: \n\n" +
-                "Shot by Harpunes: {0} \nFish eaten: {1} \nFlown through Sun Clouds: {2} \nFlown through Rain Clouds: {3}. "
-                , harpunes, fish, sunClouds, rainClouds);
+        //text = string.Format("Your Stats: \n\n" +
+        //       "Shot by Harpunes: {0} \nFish eaten: {1} \nFlown through Sun Clouds: {2} \nFlown through Rain Clouds: {3}. "
+        //       , harpunes, fish, sunClouds, rainClouds);
 
-        return text;
+        statsText_h.GetComponent<Text>().text = harpunes + " Shots";
+        statsText_f.GetComponent<Text>().text = fish + " Fishes";
+        statsText_sc.GetComponent<Text>().text = sunClouds + " SunnyClouds";
+        statsText_rc.GetComponent<Text>().text = rainClouds + " RainyClouds";
+
     }
 
     public void ExitToMenuButtonPressed()
