@@ -56,7 +56,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &512024066263178054
 Rigidbody2D:
   serializedVersion: 4
@@ -449,7 +449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &6871245852596810346
 Rigidbody2D:
   serializedVersion: 4
@@ -950,7 +950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &5362314369687358563
 Rigidbody2D:
   serializedVersion: 4
@@ -1143,7 +1143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &5801006652270553231
 Rigidbody2D:
   serializedVersion: 4
@@ -1536,7 +1536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &6742874856293095399
 Rigidbody2D:
   serializedVersion: 4
@@ -2217,7 +2217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &671133183136843494
 Rigidbody2D:
   serializedVersion: 4
@@ -2411,7 +2411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!114 &2758307033544840933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2792,7 +2792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &7391938339812618408
 Rigidbody2D:
   serializedVersion: 4
@@ -3179,7 +3179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!114 &350936650268346276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3551,7 +3551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &7427627844468876580
 Rigidbody2D:
   serializedVersion: 4
@@ -3751,7 +3751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &9178582196235732791
 Rigidbody2D:
   serializedVersion: 4
@@ -4525,7 +4525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &6716232933403300823
 Rigidbody2D:
   serializedVersion: 4
@@ -4797,7 +4797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!114 &1653831950490890977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5096,7 +5096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &8596905629363971161
 Rigidbody2D:
   serializedVersion: 4
@@ -5299,7 +5299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &47678800740144315
 Rigidbody2D:
   serializedVersion: 4
@@ -5692,7 +5692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &4164245504161304122
 Rigidbody2D:
   serializedVersion: 4
@@ -6262,7 +6262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &362245171054293870
 Rigidbody2D:
   serializedVersion: 4
@@ -6855,7 +6855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &6284175131181300994
 Rigidbody2D:
   serializedVersion: 4
@@ -7166,7 +7166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &6101661626953536287
 Rigidbody2D:
   serializedVersion: 4
@@ -7444,7 +7444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &184116357770797764
 Rigidbody2D:
   serializedVersion: 4
@@ -7945,7 +7945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &8453153954310462498
 Rigidbody2D:
   serializedVersion: 4
@@ -8145,7 +8145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &5450571856388874022
 Rigidbody2D:
   serializedVersion: 4
@@ -8532,7 +8532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!114 &7861315382553813388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8727,7 +8727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!114 &865449351724971822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9031,7 +9031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &8094047073881603373
 Rigidbody2D:
   serializedVersion: 4
@@ -9339,7 +9339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &6047489943018410075
 Rigidbody2D:
   serializedVersion: 4
@@ -9650,7 +9650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &5788923138375045783
 Rigidbody2D:
   serializedVersion: 4
@@ -10129,7 +10129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &2717331345577504849
 Rigidbody2D:
   serializedVersion: 4
@@ -10603,7 +10603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &2438558215783244756
 Rigidbody2D:
   serializedVersion: 4
@@ -10904,7 +10904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &4542733392898993213
 Rigidbody2D:
   serializedVersion: 4
@@ -11212,7 +11212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &1693275200554696865
 Rigidbody2D:
   serializedVersion: 4
@@ -11608,7 +11608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &3774482548206869733
 Rigidbody2D:
   serializedVersion: 4
@@ -11808,7 +11808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &6116441120434533528
 Rigidbody2D:
   serializedVersion: 4
@@ -12201,7 +12201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &2854752932301310193
 Rigidbody2D:
   serializedVersion: 4
@@ -12689,7 +12689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &1103939289239778614
 Rigidbody2D:
   serializedVersion: 4
@@ -13450,7 +13450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!114 &7104872610794258883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13816,7 +13816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &7487051511152720078
 Rigidbody2D:
   serializedVersion: 4
@@ -14014,7 +14014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &412135646563065618
 Rigidbody2D:
   serializedVersion: 4
@@ -14325,7 +14325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &4949045209584570896
 Rigidbody2D:
   serializedVersion: 4

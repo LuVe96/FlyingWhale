@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!114 &670528762626617167
 MonoBehaviour:
   m_ObjectHideFlags: 0

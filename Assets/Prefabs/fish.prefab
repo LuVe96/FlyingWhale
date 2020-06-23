@@ -56,7 +56,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1
-  waleVelocity: 1
+  useHorizontalVelosity: 1
 --- !u!50 &1185089155502247635
 Rigidbody2D:
   serializedVersion: 4
