@@ -6,7 +6,7 @@ public class WaleMovement_2 : MonoBehaviour
 {
 
     public float turnVelocty = 35;
-    public float waleVelocity = 0.1f;
+    public float waleVelocity;
     ////public Transform hunter;
 
     private bool isUpPressed = false;
@@ -23,6 +23,8 @@ public class WaleMovement_2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        waleVelocity = GameManager.Instance.whaleUpDownVel / 1f;
+
         animator = GetComponent<Animator>();
        
         AudioSource[] audios = GetComponents<AudioSource>();

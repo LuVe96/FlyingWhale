@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public float speedPeriode = 1.2f;
     private float defaultSpeedPeriode = 0;
     public bool playerIsInCloud { get; private set; } = false;
+    public float whaleUpDownVel = 1.5f;
 
     public int statsFish { get; private set; } = 0;
     public int statsHarpune { get; private set; } = 0;

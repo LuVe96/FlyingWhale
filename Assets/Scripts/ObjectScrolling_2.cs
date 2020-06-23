@@ -5,7 +5,8 @@ using UnityEngine;
 public class ObjectScrolling_2 : MonoBehaviour
 {
     public float speed = -1.5f;
-    public float waleVelocity = 1f;
+    public bool useHorizontalVelosity = true;
+    private float waleVelocity = 0;
     //public Transform hunters;
 
     private Rigidbody2D rBody;
@@ -18,6 +19,12 @@ public class ObjectScrolling_2 : MonoBehaviour
     {
         rBody = this.GetComponent<Rigidbody2D>();
         rBody.velocity = new Vector2(speed, 0f);
+
+        if (useHorizontalVelosity)
+        {
+            waleVelocity = GameManager.Instance.whaleUpDownVel;
+        }
+        
     }
 
     // Update is called once per frame
