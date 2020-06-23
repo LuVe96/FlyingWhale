@@ -21,13 +21,13 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: 945f306bcb3cc2c498350df6b58186d7, type: 3}
-    - time: 0.25
+    - time: 0.33333334
       value: {fileID: 21300000, guid: 8c3f0b6096f79594cb525283718fe435, type: 3}
-    - time: 0.5
+    - time: 0.6666667
       value: {fileID: 21300000, guid: e3ad640f33e17444eae9a89c88e881c0, type: 3}
-    - time: 0.75
+    - time: 0.9166667
       value: {fileID: 21300000, guid: 8c3f0b6096f79594cb525283718fe435, type: 3}
-    - time: 1
+    - time: 1.1666666
       value: {fileID: 21300000, guid: 8c3f0b6096f79594cb525283718fe435, type: 3}
     attribute: m_Sprite
     path: 
@@ -58,7 +58,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.0166667
+    m_StopTime: 1.1833333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -85,21 +85,21 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.25
+  - time: 0.33333334
     functionName: SetColliderForSprite
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 1
     messageOptions: 0
-  - time: 0.5
+  - time: 0.6666667
     functionName: SetColliderForSprite
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 2
     messageOptions: 0
-  - time: 0.75
+  - time: 0.9166667
     functionName: SetColliderForSprite
     data: 
     objectReferenceParameter: {fileID: 0}
