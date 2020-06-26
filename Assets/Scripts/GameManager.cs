@@ -40,7 +40,6 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         backgroundAudio = this.GetComponent<AudioSource>(); 
-        backgroundAudio.Play();
         if (Instance == null)
         {
             Instance = this;
@@ -55,6 +54,7 @@ public class GameManager : MonoBehaviour
 
     public void setupOnStart()
     {
+        backgroundAudio.Play();
         IsGameOver  = false;
         IsGameWon = false;
 
@@ -63,6 +63,11 @@ public class GameManager : MonoBehaviour
         statsRainCloud  = 0;
         statsSunnCloud  = 0;
         Debug.Log(GameManager.Instance.IsGameWon);
+    }
+
+    public void exitToMainMenu()
+    {
+        backgroundAudio.Stop();
     }
 
     // Update is called once per frame

@@ -110,6 +110,7 @@ public class MenuHandler : MonoBehaviour
 
     public void ExitToMenuButtonPressed()
     {
+        GameManager.Instance.exitToMainMenu();
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 
