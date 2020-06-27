@@ -12,6 +12,7 @@ TagManager:
   - goal
   - rainCloudOneTimeCollider
   - sunnyCloudOneTimeCollider
+  - whaleHunter
   layers:
   - Default
   - TransparentFX

@@ -222,7 +222,7 @@ static class PlayerSpeedMethods
             case PlayerSpeed.Normal:
                 return 0.0f;
             case PlayerSpeed.Faster:
-                return -1f;
+                return -1.2f;
             default:
                 return 0.0f;
 
