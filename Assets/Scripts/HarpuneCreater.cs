@@ -10,7 +10,7 @@ public class HarpuneCreater : MonoBehaviour
 
     private float timeSum = 0;
     private float t2Sum = 0;
-    private bool isThreeShot = true;
+    private ShotType shotType = ShotType.None;
     private float threeShotTimeSum = 0;
     private int threeShotShots = 0;
 
@@ -20,7 +20,12 @@ public class HarpuneCreater : MonoBehaviour
     private void Awake()
     {
         referenz = GameObject.Find("MovingObjectReferenz").transform; 
-      spawnTime -= 0.5f;
+        spawnTime -= 0.5f;
+        if (gameObject.tag == "whaleHunterSpecial")
+        {
+            spawnTime -= 0.5f;
+        }
+
     }
 
     // Update is called once per frame
@@ -37,37 +42,72 @@ public class HarpuneCreater : MonoBehaviour
             {
                 t2Sum = 0;
                 timeSum = 0;
-                isThreeShot = true;
+
+                if( gameObject.tag == "whaleHunter")
+                {
+                    shotType = ShotType.ThreeSalve;
+                }
+                else if (gameObject.tag == "whaleHunterSpecial")
+                {
+                    shotType = ShotType.FourSchrot;
+                }
             }
 
         }
 
-        if (isThreeShot && threeShotTimeSum >= 0.3)
+        if (shotType == ShotType.ThreeSalve && threeShotTimeSum >= 0.3)
         {
-            threeShotTimeSum = 0;
-            threeShotShots++;
-            if(threeShotShots == 1)
-            {
-                currentRefPos = referenz.position.y;
+            ShotValve();
+        }  
+        else if(shotType == ShotType.FourSchrot)
+        {
+            ShotSchrot();
+        }
+    }
 
-            }
-
+    void ShotSchrot()
+    {
+        for (int i = 0; i < 4; i++)
+        {
             GameObject newHarpune = Instantiate(Harpune);
             newHarpune.transform.position = hunter.transform.position;
             newHarpune.transform.localScale *= 1.3f;
-            HarpuneShot hp = newHarpune.GetComponent<HarpuneShot>();          
-            hp.Shot(currentRefPos - referenz.position.y);
+            HarpuneShot hp = newHarpune.GetComponent<HarpuneShot>();
+            hp.Shot(0);
+        }
+        shotType = ShotType.None;
+    }
 
-            if(threeShotShots >= 3)
-            {
-                isThreeShot = false;
-                threeShotShots = 0;
-            }
+    void ShotValve()
+    {
+        threeShotTimeSum = 0;
+        threeShotShots++;
+        if (threeShotShots == 1)
+        {
+            currentRefPos = referenz.position.y;
 
         }
 
-      
-    }
+        GameObject newHarpune = Instantiate(Harpune);
+        newHarpune.transform.position = hunter.transform.position;
+        newHarpune.transform.localScale *= 1.3f;
+        HarpuneShot hp = newHarpune.GetComponent<HarpuneShot>();
+        hp.Shot(currentRefPos - referenz.position.y);
 
-   
+        if (threeShotShots >= 3)
+        {
+            shotType = ShotType.None;
+            threeShotShots = 0;
+        }
+    }
 }
+
+
+enum ShotType
+{
+    ThreeSalve,
+    FourSchrot,
+    None
+}
+
+
