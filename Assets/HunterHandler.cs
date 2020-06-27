@@ -53,7 +53,7 @@ public class HunterHandler : MonoBehaviour
     {
         switch (GameManager.Instance.levelDifficulty)
         {
-            case LevelDifficulty.Easy: spawnhunters(new GameObject[1] { normalHunter }); break;
+            case LevelDifficulty.Easy: spawnhunters(new GameObject[2] { normalHunter, specialHunter }); break;
             case LevelDifficulty.Normal: spawnhunters(new GameObject[1] { specialHunter }); break;
             case LevelDifficulty.Hard: spawnhunters(new GameObject[2] { normalHunter, specialHunter }); break;
 

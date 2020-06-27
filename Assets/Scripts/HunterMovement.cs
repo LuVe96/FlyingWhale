@@ -34,7 +34,7 @@ public class HunterMovement : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "whaleHunter")
+        if (collision.gameObject.tag == "whaleHunter" || collision.gameObject.tag == "whaleHunterSpecial")
         {
             if(Mathf.Abs(collision.GetComponent<HunterMovement>().differenz_y + yOffset) < Mathf.Abs(differenz_y + yOffset))
             {
