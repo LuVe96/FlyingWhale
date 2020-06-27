@@ -7,6 +7,7 @@ public class WaleMovement_2 : MonoBehaviour
 
     public float turnVelocty = 35;
     public float waleVelocity;
+    public GameObject redZone;
     ////public Transform hunter;
 
     private bool isUpPressed = false;
@@ -149,6 +150,14 @@ public class WaleMovement_2 : MonoBehaviour
         else
         {
             GameManager.Instance.setWhaleInArea(WhaleArea.Middle);
+        }
+
+        //RedZone
+
+        float dif = Mathf.Abs(transform.position.x - redZone.transform.position.x);
+        if(dif < 4 && dif > 0)
+        {
+            redZone.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, (4 - dif) / 4) ;
         }
 
     }
