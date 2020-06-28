@@ -219,7 +219,7 @@ static class PlayerSpeedMethods
         switch (p1)
         {
             case PlayerSpeed.Slower:
-                return 3.5f; // 0.5
+                return 0.5f; // 0.5
             case PlayerSpeed.SunSlower:
                 return 0.2f;
             case PlayerSpeed.Normal:
