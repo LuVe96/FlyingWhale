@@ -8,6 +8,7 @@ ScriptsOnlyBuild:
     - Generatedobject
     - HarpuneCreater
     - HarpuneShot
+    - HunterHandler
     - HunterMovement
     - LevelGenerator
     - MainMenu
@@ -69,6 +70,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
     - Class: 104
@@ -126,6 +129,10 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 328
+      Script: {instanceID: 0}
+    - Class: 329
       Script: {instanceID: 0}
     Assets/Scenes/prototype_scene_2_pro.unity:
     - Class: 1
@@ -208,6 +215,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14248}
     - Class: 114
       Script: {instanceID: 14302}
+    - Class: 114
+      Script: {instanceID: 86156}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -397,7 +406,7 @@ ScriptsOnlyBuild:
     className: RectMask2D
   - hash:
       serializedVersion: 2
-      Hash: 89a6f9105bdb3708c4c4448dd7ea7492
+      Hash: 02d04c3d6654a77f80a8f2b98eec60df
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: WaleMovement_2
@@ -433,7 +442,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: e66987441111c1bcc59bcb079ae579fa
+      Hash: 3e1bc38d657d44953150fabce7b08003
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -655,7 +664,7 @@ ScriptsOnlyBuild:
     className: PolygonColliderOptimizer
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: ae0fdd40b5a1a2cc1f04cdcce0fffb16
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainMenu
@@ -709,7 +718,7 @@ ScriptsOnlyBuild:
     className: WaleMovement
   - hash:
       serializedVersion: 2
-      Hash: f476a3191495c135d2ce647642bee512
+      Hash: 04d955b65656f3b6a355c9a37f988bca
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MenuHandler
@@ -721,7 +730,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 403b05cfcf4f1eda09f0cada71a388ab
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HunterMovement
@@ -833,6 +842,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: f3683ae75ea180408d946b1c95220a02
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HunterHandler
   platform: 5
   scenePathNames:
   - Assets/Scenes/Main_menu_scene.unity
