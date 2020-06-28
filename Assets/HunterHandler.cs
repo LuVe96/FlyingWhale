@@ -22,9 +22,10 @@ public class HunterHandler : MonoBehaviour
     void Update()
     {
 
-        if(GameManager.Instance.levelDifficulty != currentDifficulty)
+        if(GameManager.Instance.levelDifficulty != currentDifficulty && GameManager.Instance.levelDifficulty != LevelDifficulty.End)
         {
             phase = HunterSpawnPhase.End;
+            currentDifficulty = (GameManager.Instance.levelDifficulty);
         }
 
 
@@ -51,6 +52,15 @@ public class HunterHandler : MonoBehaviour
 
     void OnPhaseSpawn()
     {
+        Debug.Log("spawn");
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            if (transform.GetChild(i).gameObject.tag == "whaleHunter" || transform.GetChild(i).gameObject.tag == "whaleHunterSpecial")
+            {
+                Destroy(transform.GetChild(i).gameObject);
+            }
+        }
+
         switch (GameManager.Instance.levelDifficulty)
         {
             case LevelDifficulty.Easy: spawnhunters(new GameObject[1] { normalHunter }); break;
@@ -93,11 +103,12 @@ public class HunterHandler : MonoBehaviour
 
     bool OnPhaseEnd()
     {
-        if( transform.position.x > -11)
+        if ( transform.position.x > -11)
         {
             transform.position += new Vector3(-velocity * Time.deltaTime, 0, 0);
             return false;
         }
+
         return true;
     }
 

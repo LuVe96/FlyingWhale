@@ -929,7 +929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d7b02b454c19224d84c2c9a875c0d72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeForEachDificulty: 150
+  timeForEachDificulty: 60
   speedPeriode: 1.2
   whaleUpDownVel: 1.8
   menuhandler: {fileID: 2036471291}
