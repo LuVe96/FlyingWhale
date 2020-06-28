@@ -43,6 +43,5 @@ public class HunterMovement : MonoBehaviour
             }
 
         }
-        Debug.Log("triggerd with: " + collision.gameObject.name);
     }
 }

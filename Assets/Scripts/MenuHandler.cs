@@ -7,10 +7,14 @@ public class MenuHandler : MonoBehaviour
 {
     static bool gameIsPaused = false;
     public GameObject menu;
+    public GameObject clipMenu;
 
     public Sprite gameOverImage;
     public Sprite pauseImage;
     public Sprite wonImage;
+    public UnityEngine.Video.VideoClip wonClip;
+    public UnityEngine.Video.VideoClip gameOverClip;
+    private UnityEngine.Video.VideoPlayer videoPlayer;
 
     private GameObject statsText_f;
     private GameObject statsText_h;
@@ -20,8 +24,12 @@ public class MenuHandler : MonoBehaviour
     private GameObject resumRetryButton;
     private GameObject exitToMenuButton;
 
+    private bool isClipStarted = false;
+    private float videoClipTime = 0;
+
     private void Start()
     {
+        videoPlayer = clipMenu.GetComponent<UnityEngine.Video.VideoPlayer>();
         statsText_h = menu.transform.GetChild(0).gameObject;
         statsText_f = menu.transform.GetChild(1).gameObject;
         statsText_sc = menu.transform.GetChild(2).gameObject;
@@ -36,6 +44,7 @@ public class MenuHandler : MonoBehaviour
 
     void Update()
     {
+      
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (gameIsPaused)
@@ -46,46 +55,141 @@ public class MenuHandler : MonoBehaviour
             {
                 resumRetryButton.SetActive(true);
                 resumRetryButton.transform.GetChild(0).GetComponent<Text>().text = "Resume";
-                PauseGame();
+                PauseGame(true);
             }
         }
 
-        if (GameManager.Instance.IsGameOver)
+        if (isClipStarted)
         {
-            PauseGame();
+            videoClipTime += Time.deltaTime;
+            if(GameManager.Instance.IsGameOver)
+            {
+                showGameOverMenu();
+            }
+            else if (GameManager.Instance.IsGameWon)
+            {
+                showWonMenu();
+            }
+
+            FadeIn(FadeInOpt.VideoClip);
+        }  
+
+    }
+
+    void FadeIn(FadeInOpt opt)
+    {
+        if (videoPlayer.targetCameraAlpha < 1 && opt == FadeInOpt.VideoClip)
+        {
+            videoPlayer.targetCameraAlpha += 1f * Time.deltaTime;
+        }
+        else if (opt == FadeInOpt.Menu && menu.GetComponent<Image>().color.a < 1)
+        {
+            menu.GetComponent<Image>().color += new Color(0, 0, 0, 1f * Time.deltaTime / Time.timeScale);
+            statsText_h.GetComponent<Text>().color += new Color(0, 0, 0, 1f * Time.deltaTime / Time.timeScale);
+            statsText_f.GetComponent<Text>().color += new Color(0, 0, 0, 1f * Time.deltaTime / Time.timeScale);
+            statsText_sc.GetComponent<Text>().color += new Color(0, 0, 0, 1f * Time.deltaTime / Time.timeScale);
+            statsText_rc.GetComponent<Text>().color += new Color(0, 0, 0, 1f * Time.deltaTime / Time.timeScale);
+            resumRetryButton.GetComponent<Image>().color += new Color(0, 0, 0, 1f * Time.deltaTime / Time.timeScale);
+            resumRetryButton.GetComponentInChildren<Text>().color += new Color(0, 0, 0, 1f * Time.deltaTime / Time.timeScale);
+            exitToMenuButton.GetComponent<Image>().color += new Color(0, 0, 0, 1f * Time.deltaTime / Time.timeScale);
+            exitToMenuButton.GetComponentInChildren<Text>().color += new Color(0, 0, 0, 1f * Time.deltaTime / Time.timeScale);
+        }
+        else if(opt == FadeInOpt.Reset)
+        {
+            menu.GetComponent<Image>().color += new Color(0, 0, 0, -menu.GetComponent<Image>().color.a);
+            statsText_h.GetComponent<Text>().color += new Color(0, 0, 0, -statsText_h.GetComponent<Text>().color.a);
+            statsText_f.GetComponent<Text>().color += new Color(0, 0, 0, -statsText_f.GetComponent<Text>().color.a);
+            statsText_sc.GetComponent<Text>().color += new Color(0, 0, 0, -statsText_sc.GetComponent<Text>().color.a);
+            statsText_rc.GetComponent<Text>().color += new Color(0, 0, 0, -statsText_rc.GetComponent<Text>().color.a);
+            resumRetryButton.GetComponent<Image>().color += new Color(0, 0, 0, -resumRetryButton.GetComponent<Image>().color.a);
+            resumRetryButton.GetComponentInChildren<Text>().color += new Color(0, 0, 0, -resumRetryButton.GetComponentInChildren<Text>().color.a);
+            exitToMenuButton.GetComponent<Image>().color += new Color(0, 0, 0, -exitToMenuButton.GetComponent<Image>().color.a);
+            exitToMenuButton.GetComponentInChildren<Text>().color += new Color(0, 0, 0, -exitToMenuButton.GetComponentInChildren<Text>().color.a);
+        }
+        else if (opt == FadeInOpt.Instant)
+        {
+            menu.GetComponent<Image>().color += new Color(0, 0, 0,1);
+            statsText_h.GetComponent<Text>().color += new Color(0, 0, 0, 1);
+            statsText_f.GetComponent<Text>().color += new Color(0, 0, 0, 1);
+            statsText_sc.GetComponent<Text>().color += new Color(0, 0, 0, 1);
+            statsText_rc.GetComponent<Text>().color += new Color(0, 0, 0, 1);
+            resumRetryButton.GetComponent<Image>().color += new Color(0, 0, 0, 1);
+            resumRetryButton.GetComponentInChildren<Text>().color += new Color(0, 0, 0, 1);
+            exitToMenuButton.GetComponent<Image>().color += new Color(0, 0, 0, 1);
+            exitToMenuButton.GetComponentInChildren<Text>().color += new Color(0, 0, 0, 1);
+        }
+
+
+
+    }
+
+    public void showGameOverMenu()
+    {
+       
+        if (!isClipStarted)
+        {
+            clipMenu.SetActive(true);
+            videoPlayer.clip = gameOverClip;
+            videoPlayer.Play();
+            isClipStarted = true;
+            
+        }
+        if ( videoClipTime >= gameOverClip.length)
+        {
+            FadeIn(FadeInOpt.Menu);          
+            PauseGame(false);
             resumRetryButton.SetActive(true);
             menu.GetComponent<Image>().sprite = gameOverImage;
             //mainText.GetComponent<Text>().text = "Game Over";
             createStatsText();
             resumRetryButton.transform.GetChild(0).GetComponent<Text>().text = "Restart";
-            
+        }
+    }
+
+    public void showWonMenu()
+    {
+        if (!isClipStarted)
+        {
+            clipMenu.SetActive(true);
+            videoPlayer.clip = wonClip;
+            videoPlayer.Play();
+            isClipStarted = true;
         }
 
-        if (GameManager.Instance.IsGameWon)
+        if ( videoClipTime >= wonClip.length)
         {
-            PauseGame();
+            FadeIn(FadeInOpt.Menu);
+            PauseGame(false);
             resumRetryButton.SetActive(false);
             menu.GetComponent<Image>().sprite = wonImage;
             //mainText.GetComponent<Text>().text = "You have won";
-             createStatsText();
-            
+            createStatsText();
         }
+       
     }
 
     void Resume()
     {
         menu.SetActive(false);
+        clipMenu.SetActive(false);
+        FadeIn(FadeInOpt.Reset);
         Time.timeScale = 1f;
         gameIsPaused = false;
+        isClipStarted = false;
     }
 
-    void PauseGame()
+    void PauseGame(bool showInstant)
     {
         //mainText.GetComponent<Text>().text = "Pause";
         menu.GetComponent<Image>().sprite = pauseImage;
         createStatsText();
         menu.SetActive(true);
-        Time.timeScale = 0f;
+        if (showInstant)
+        {
+            FadeIn(FadeInOpt.Instant);
+        }
+    
+        Time.timeScale = 0.000001f;
         gameIsPaused = true;
     }
 
@@ -127,4 +231,12 @@ public class MenuHandler : MonoBehaviour
 
     }
 
+}
+
+enum FadeInOpt
+{
+    VideoClip,
+    Menu,
+    Instant,
+    Reset
 }

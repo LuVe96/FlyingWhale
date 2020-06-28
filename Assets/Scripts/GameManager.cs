@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     private float defaultSpeedPeriode = 0;
     public bool playerIsInCloud { get; private set; } = false;
     public float whaleUpDownVel = 1.5f;
+    public GameObject menuhandler;
 
     public int statsFish { get; private set; } = 0;
     public int statsHarpune { get; private set; } = 0;
@@ -175,12 +176,14 @@ public class GameManager : MonoBehaviour
     public void PlayerIsDead()
     {
         IsGameOver = true;
+        menuhandler.GetComponent<MenuHandler>().showGameOverMenu();
         backgroundAudio.Stop();
     }
 
     public void PlayerHasWon()
     {
         IsGameWon = true;
+        menuhandler.GetComponent<MenuHandler>().showWonMenu();
         backgroundAudio.Stop();
     }
 
@@ -216,7 +219,7 @@ static class PlayerSpeedMethods
         switch (p1)
         {
             case PlayerSpeed.Slower:
-                return 0.5f;
+                return 3.5f; // 0.5
             case PlayerSpeed.SunSlower:
                 return 0.2f;
             case PlayerSpeed.Normal:
