@@ -53,7 +53,7 @@ public class HunterHandler : MonoBehaviour
     {
         switch (GameManager.Instance.levelDifficulty)
         {
-            case LevelDifficulty.Easy: spawnhunters(new GameObject[1] { normalHunter}); break;
+            case LevelDifficulty.Easy: spawnhunters(new GameObject[1] { normalHunter }); break;
             case LevelDifficulty.Normal: spawnhunters(new GameObject[1] { specialHunter }); break;
             case LevelDifficulty.Hard: spawnhunters(new GameObject[2] { normalHunter, specialHunter }); break;
 
@@ -63,12 +63,32 @@ public class HunterHandler : MonoBehaviour
 
     void spawnhunters( GameObject [] hunters)
     {
-        foreach (var hunter in hunters)
-        {
-            GameObject newHunter = Instantiate(hunter, transform);
-            newHunter.transform.position = new Vector3(transform.position.x, Random.Range(-10, 10), 0);
 
+
+        for (int i = 0; i < hunters.Length; i++)
+        {
+            GameObject newHunter = Instantiate(hunters[i], transform);
+
+            if( hunters.Length == 2)
+            {
+                if( i == 0)
+                {
+                    newHunter.transform.position = new Vector3(transform.position.x, Random.Range(2, 10), 0);
+                    newHunter.GetComponent<HunterMovement>().setHunterPos(HunterPos.Top);
+                }
+                else
+                {
+                    newHunter.transform.position = new Vector3(transform.position.x, Random.Range(-2, -10), 0);
+                    newHunter.GetComponent<HunterMovement>().setHunterPos(HunterPos.Bottom);
+                }
+            }   
+            else
+            {
+                newHunter.transform.position = new Vector3(transform.position.x, Random.Range(-10, 10), 0);
+            }
+            
         }
+
     }
 
     bool OnPhaseEnd()
