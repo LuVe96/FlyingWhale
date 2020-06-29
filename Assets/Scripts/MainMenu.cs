@@ -1,11 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
     public GameObject Instructions;
     public GameObject main;
+
+    public UnityEngine.Video.VideoClip clip;
+    private float timeSum = 0;
+
+    private void Start()
+    {
+        main.GetComponent<UnityEngine.Video.VideoPlayer>().clip = clip;
+        main.GetComponent<UnityEngine.Video.VideoPlayer>().Play();
+        timeSum = 0;
+        Time.timeScale = 1;
+        FadeIn(FadeInOpt.Reset);
+    }
+
+    private void Update()
+    {
+        timeSum += Time.deltaTime;
+        Debug.Log("Fade...: " + timeSum);
+
+        if (timeSum >= clip.length)
+        {
+           
+            FadeIn(FadeInOpt.Menu);
+        }
+    }
 
     public void ExitGame()
     {
@@ -45,6 +70,20 @@ public class MainMenu : MonoBehaviour
         //        GameManager.Instance.setLevelDificulty(LevelDifficulty.Easy);
         //        break;
         //}
+    }
+
+    void FadeIn(FadeInOpt opt)
+    {
+         if (opt == FadeInOpt.Menu )
+        {
+            main.GetComponent<Image>().color += new Color(0, 0, 0, 0.5f * Time.deltaTime );
+            main.GetComponentInChildren<CanvasGroup>().alpha += 0.5f * Time.deltaTime;
+        }
+        else if (opt == FadeInOpt.Reset)
+        {
+            main.GetComponent<Image>().color += new Color(0, 0, 0,-main.GetComponent<Image>().color.a);
+            main.GetComponentInChildren<CanvasGroup>().alpha =0;
+        }
     }
 }
 
