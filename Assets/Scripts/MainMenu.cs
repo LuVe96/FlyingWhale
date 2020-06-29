@@ -23,7 +23,6 @@ public class MainMenu : MonoBehaviour
     private void Update()
     {
         timeSum += Time.deltaTime;
-        Debug.Log("Fade...: " + timeSum);
 
         if (timeSum >= clip.length)
         {

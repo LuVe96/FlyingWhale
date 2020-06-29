@@ -231,6 +231,24 @@ static class PlayerSpeedMethods
 
         }
     }
+
+    public static float GetVerticalSpeedMultiplier(this PlayerSpeed p1)
+    {
+        switch (p1)
+        {
+            case PlayerSpeed.Slower:
+                return 0.5f; // 0.5
+            case PlayerSpeed.SunSlower:
+                return 0.8f;
+            case PlayerSpeed.Normal:
+                return 1f;
+            case PlayerSpeed.Faster:
+                return 1.5f;
+            default:
+                return 1f;
+
+        }
+    }
 }
 
 public enum PlayerHorPos

@@ -38,7 +38,7 @@ public class WaleMovement_2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        float velMulti = GameManager.Instance.playerSpeed.GetVerticalSpeedMultiplier();
         // horizontal Movement
         if (Input.GetKeyDown(KeyCode.W) || isUpPressed)
         {
@@ -52,12 +52,12 @@ public class WaleMovement_2 : MonoBehaviour
             {
                 if(transform.localPosition.y <= 7.8)
                 {
-                    transform.position += new Vector3(0, waleVelocity * Time.deltaTime, 0);
+                    transform.position += new Vector3(0, waleVelocity * velMulti * Time.deltaTime, 0);
                 }   
             }
             if (GameManager.Instance.playerHorPos == PlayerHorPos.Bottom)
             {
-                transform.position += new Vector3(0, waleVelocity * Time.deltaTime, 0);
+                transform.position += new Vector3(0, waleVelocity * velMulti * Time.deltaTime, 0);
                 if (transform.localPosition.y >= 0)
                 {
                     GameManager.Instance.setPlayerHozPos(PlayerHorPos.Middle);
@@ -86,12 +86,12 @@ public class WaleMovement_2 : MonoBehaviour
             {
                 if (transform.localPosition.y >= -7.8)
                 {
-                    transform.position += new Vector3(0, -waleVelocity * Time.deltaTime, 0);
+                    transform.position += new Vector3(0, -waleVelocity * velMulti * Time.deltaTime, 0);
                 } 
             }
             if (GameManager.Instance.playerHorPos == PlayerHorPos.Top)
             {
-                transform.position += new Vector3(0, -waleVelocity * Time.deltaTime, 0);
+                transform.position += new Vector3(0, -waleVelocity * velMulti * Time.deltaTime, 0);
                 if (transform.localPosition.y <= 0)
                 {
                     GameManager.Instance.setPlayerHozPos(PlayerHorPos.Middle);

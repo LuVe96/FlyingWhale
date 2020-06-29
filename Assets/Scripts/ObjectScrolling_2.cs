@@ -30,6 +30,7 @@ public class ObjectScrolling_2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float velMulti = GameManager.Instance.playerSpeed.GetVerticalSpeedMultiplier();
         
         if (Input.GetKey(KeyCode.W) )
         {
@@ -41,7 +42,7 @@ public class ObjectScrolling_2 : MonoBehaviour
                 {
                     if (GameManager.Instance.playerHorPos == PlayerHorPos.Middle)
                     {
-                        transform.position += new Vector3(0, -waleVelocity * Time.deltaTime, 0);
+                        transform.position += new Vector3(0, -waleVelocity * velMulti * Time.deltaTime, 0);
                         //hunters.position -= new Vector3(0, -waleVelocity * Time.deltaTime, 0);
                     }
                 }
@@ -54,7 +55,7 @@ public class ObjectScrolling_2 : MonoBehaviour
             {
                 if (GameManager.Instance.playerHorPos == PlayerHorPos.Middle)
                 {
-                    transform.position += new Vector3(0, -waleVelocity * Time.deltaTime, 0);
+                    transform.position += new Vector3(0, -waleVelocity * velMulti * Time.deltaTime, 0);
                     //hunters.position -= new Vector3(0, -waleVelocity * Time.deltaTime, 0);
                 }
             }
@@ -73,7 +74,7 @@ public class ObjectScrolling_2 : MonoBehaviour
                 {
                     if (GameManager.Instance.playerHorPos == PlayerHorPos.Middle)
                     {
-                        transform.position += new Vector3(0, waleVelocity * Time.deltaTime, 0);
+                        transform.position += new Vector3(0, waleVelocity * velMulti * Time.deltaTime, 0);
                         //hunters.position -= new Vector3(0, waleVelocity * Time.deltaTime, 0);          
                     }
 
@@ -87,7 +88,7 @@ public class ObjectScrolling_2 : MonoBehaviour
             {
                 if (GameManager.Instance.playerHorPos == PlayerHorPos.Middle)
                 {
-                    transform.position += new Vector3(0, waleVelocity * Time.deltaTime, 0);
+                    transform.position += new Vector3(0, waleVelocity * velMulti * Time.deltaTime, 0);
                     //hunters.position -= new Vector3(0, waleVelocity * Time.deltaTime, 0);          
                 }
             }
