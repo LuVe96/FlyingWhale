@@ -230,9 +230,9 @@ static class PlayerSpeedMethods
             case PlayerSpeed.Faster:
                 if( GameManager.Instance.levelDifficulty == LevelDifficulty.Hard)
                 {
-                    return -1.5f;
+                    return -1.3f;
                 }
-                return -1.2f;
+                return -1f;
             default:
                 return 0.0f;
 
