@@ -204,6 +204,7 @@ public enum PlayerSpeed
 {
     Slower,
     SunSlower,
+    HarpuneSlower,
     Normal,
     Faster
 
@@ -222,6 +223,8 @@ static class PlayerSpeedMethods
                 return 0.8f; // 0.5
             case PlayerSpeed.SunSlower:
                 return 0.2f;
+            case PlayerSpeed.HarpuneSlower:
+                return 1.5f;
             case PlayerSpeed.Normal:
                 return 0.0f;
             case PlayerSpeed.Faster:
@@ -240,6 +243,8 @@ static class PlayerSpeedMethods
                 return 0.5f; // 0.5
             case PlayerSpeed.SunSlower:
                 return 0.8f;
+            case PlayerSpeed.HarpuneSlower:
+                return 0.3f;
             case PlayerSpeed.Normal:
                 return 1f;
             case PlayerSpeed.Faster:

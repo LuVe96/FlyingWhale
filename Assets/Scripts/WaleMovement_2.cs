@@ -169,7 +169,7 @@ public class WaleMovement_2 : MonoBehaviour
         {
             //hunter.transform.position += new Vector3(1.5f, 0, 0);
             GameManager.Instance.setStatsFor("statsHarpune");
-            GameManager.Instance.PlayerGotSlower(true);
+            GameManager.Instance.PlayerGotSlower(true, PlayerSpeed.HarpuneSlower);
             whaleshot.Play();
             Destroy(collision.gameObject);
             
