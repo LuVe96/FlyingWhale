@@ -228,6 +228,10 @@ static class PlayerSpeedMethods
             case PlayerSpeed.Normal:
                 return 0.0f;
             case PlayerSpeed.Faster:
+                if( GameManager.Instance.levelDifficulty == LevelDifficulty.Hard)
+                {
+                    return -1.5f;
+                }
                 return -1.2f;
             default:
                 return 0.0f;
@@ -248,6 +252,10 @@ static class PlayerSpeedMethods
             case PlayerSpeed.Normal:
                 return 1f;
             case PlayerSpeed.Faster:
+                if (GameManager.Instance.levelDifficulty == LevelDifficulty.Hard)
+                {
+                    return 1.8f;
+                }
                 return 1.5f;
             default:
                 return 1f;
