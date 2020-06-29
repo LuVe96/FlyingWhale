@@ -5,7 +5,7 @@ using UnityEngine;
 public class HarpuneCreater : MonoBehaviour
 {
     public GameObject Harpune;
-    public Transform hunter;
+    public Transform shotPointHunter;
     public float spawnTime = 2;
 
     private float timeSum = 0;
@@ -70,11 +70,12 @@ public class HarpuneCreater : MonoBehaviour
         for (int i = 0; i < 4; i++)
         {
             GameObject newHarpune = Instantiate(Harpune);
-            newHarpune.transform.position = hunter.transform.position;
+            newHarpune.transform.position = shotPointHunter.transform.position;
             newHarpune.transform.localScale *= 1.3f;
             HarpuneShot hp = newHarpune.GetComponent<HarpuneShot>();
             hp.Shot(0);
         }
+        shotPointHunter.GetComponent<Animator>().SetTrigger("ExplosionTrigger");
         shotType = ShotType.None;
     }
 
@@ -85,11 +86,12 @@ public class HarpuneCreater : MonoBehaviour
         if (threeShotShots == 1)
         {
             currentRefPos = referenz.position.y;
+            shotPointHunter.GetComponent<Animator>().SetTrigger("ExplosionTrigger");
 
         }
 
         GameObject newHarpune = Instantiate(Harpune);
-        newHarpune.transform.position = hunter.transform.position;
+        newHarpune.transform.position = shotPointHunter.transform.position;
         newHarpune.transform.localScale *= 1.3f;
         HarpuneShot hp = newHarpune.GetComponent<HarpuneShot>();
         hp.Shot(currentRefPos - referenz.position.y);
