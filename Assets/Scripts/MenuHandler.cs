@@ -220,12 +220,14 @@ public class MenuHandler : MonoBehaviour
 
     public void ResumeRetryButtonPressed()
     {
-        if (gameIsPaused)
+        if (gameIsPaused && !GameManager.Instance.IsGameOver)
         {
+            Debug.Log("Resume");
             Resume();
         }
         else if (GameManager.Instance.IsGameOver)
         {
+            Debug.Log("Retry");
             UnityEngine.SceneManagement.SceneManager.LoadScene(1);
         }
 
