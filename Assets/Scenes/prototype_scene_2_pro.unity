@@ -930,7 +930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d7b02b454c19224d84c2c9a875c0d72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeForEachDificulty: 60
+  timeForEachDificulty: 30
   menuhandler: {fileID: 2036471291}
   clipNear: {fileID: 8300000, guid: a8c3ac6fa61cda94781f1246fa422744, type: 3}
   clipMiddle: {fileID: 8300000, guid: 8f0a586152e638741b1d73b04951a91d, type: 3}
@@ -3753,8 +3753,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279483530}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.34, y: -0.16812406, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.2, y: -0.16812406, z: 0}
+  m_LocalScale: {x: 1.1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2089693584}
   m_RootOrder: 1
@@ -4462,10 +4462,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menu: {fileID: 151116573}
   clipMenu: {fileID: 1331202630}
-  gameOverImage: {fileID: 21300000, guid: 046dc5cd05cba934a9752249d908aa98, type: 3}
-  pauseImage: {fileID: 21300000, guid: 6f9f6c94241654549a4fd87af402687b, type: 3}
-  wonImage: {fileID: 21300000, guid: 4ba3787a96721c04598f07c6372ae6c3, type: 3}
-  wonClip: {fileID: 32900000, guid: 6c23dabf251e3674885f44f3eb3110a7, type: 3}
+  gameOverImage: {fileID: 21300000, guid: 0df39221d0008e7428701945cfa8b7c3, type: 3}
+  pauseImage: {fileID: 21300000, guid: b4bc970bef53032489faa411bf7eeb4c, type: 3}
+  wonImage: {fileID: 21300000, guid: c727ddb59ebfacf4fa05b4b42b554836, type: 3}
+  wonClip: {fileID: 32900000, guid: 8bce279aa3a194c42821d3164f9bc75c, type: 3}
   gameOverClip: {fileID: 32900000, guid: 7a09f04589cd9154292d7d5b88c56d80, type: 3}
 --- !u!1 &2089693582
 GameObject:
