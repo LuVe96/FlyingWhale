@@ -34,7 +34,7 @@ public class HarpuneCreater : MonoBehaviour
         timeSum += Time.deltaTime;
         threeShotTimeSum += Time.deltaTime;
 
-        if ( timeSum >= spawnTime && !GameManager.Instance.playerIsInCloud)
+        if ( timeSum >= spawnTime && !MovementManager.Instance.playerIsInCloud)
         {
 
             t2Sum += Time.deltaTime;

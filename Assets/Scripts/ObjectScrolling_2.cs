@@ -18,31 +18,29 @@ public class ObjectScrolling_2 : MonoBehaviour
     void Start()
     {
         rBody = this.GetComponent<Rigidbody2D>();
-        rBody.velocity = new Vector2(speed, 0f);
+        rBody.velocity = new Vector2(speed, 0f);   
 
-        if (useHorizontalVelosity)
-        {
-            waleVelocity = GameManager.Instance.whaleUpDownVel;
-        }
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        float velMulti = GameManager.Instance.playerSpeed.GetVerticalSpeedMultiplier();
-        
-        if (Input.GetKey(KeyCode.W) )
+        if (useHorizontalVelosity)
+        {
+            waleVelocity = MovementManager.Instance.realWhaleUpDownVel;
+        }
+
+        if (Input.GetKey(KeyCode.W))
         {
             isUpPressed = true;
 
-            if ( gameObject.name == "Background")
+            if (gameObject.name == "Background")
             {
                 if (GetComponent<Transform>().position.y >= -5)
                 {
                     if (GameManager.Instance.playerHorPos == PlayerHorPos.Middle)
                     {
-                        transform.position += new Vector3(0, -waleVelocity * velMulti * Time.deltaTime, 0);
+                        transform.position += new Vector3(0, -waleVelocity * Time.deltaTime, 0);
                         //hunters.position -= new Vector3(0, -waleVelocity * Time.deltaTime, 0);
                     }
                 }
@@ -55,16 +53,16 @@ public class ObjectScrolling_2 : MonoBehaviour
             {
                 if (GameManager.Instance.playerHorPos == PlayerHorPos.Middle)
                 {
-                    transform.position += new Vector3(0, -waleVelocity * velMulti * Time.deltaTime, 0);
+                    transform.position += new Vector3(0, -waleVelocity * Time.deltaTime, 0);
                     //hunters.position -= new Vector3(0, -waleVelocity * Time.deltaTime, 0);
                 }
             }
 
-           
-           
+
+
         }
 
-        if (Input.GetKey(KeyCode.S) )
+        if (Input.GetKey(KeyCode.S))
         {
             isDownPressed = true;
 
@@ -74,7 +72,7 @@ public class ObjectScrolling_2 : MonoBehaviour
                 {
                     if (GameManager.Instance.playerHorPos == PlayerHorPos.Middle)
                     {
-                        transform.position += new Vector3(0, waleVelocity * velMulti * Time.deltaTime, 0);
+                        transform.position += new Vector3(0, waleVelocity * Time.deltaTime, 0);
                         //hunters.position -= new Vector3(0, waleVelocity * Time.deltaTime, 0);          
                     }
 
@@ -88,13 +86,13 @@ public class ObjectScrolling_2 : MonoBehaviour
             {
                 if (GameManager.Instance.playerHorPos == PlayerHorPos.Middle)
                 {
-                    transform.position += new Vector3(0, waleVelocity * velMulti * Time.deltaTime, 0);
+                    transform.position += new Vector3(0, waleVelocity * Time.deltaTime, 0);
                     //hunters.position -= new Vector3(0, waleVelocity * Time.deltaTime, 0);          
                 }
             }
 
-            
-                
+
+
         }
 
         //this.transform.position += new Vector3(speed * Time.deltaTime, 0f, 0f);
@@ -117,7 +115,7 @@ public class ObjectScrolling_2 : MonoBehaviour
         //    transform.position += new Vector3(psFast.GetSpeed() * Time.deltaTime, 0, 0);
         //}
 
-       
+
     }
 
 

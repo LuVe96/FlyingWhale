@@ -5,12 +5,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
     public static GameManager Instance = null;
 
     public bool IsGameOver { get; private set; } = false;
     public bool IsGameWon { get; private set; } = false;
-    public PlayerSpeed playerSpeed { get; private set; } = PlayerSpeed.Normal;
+    //public PlayerSpeed playerSpeed { get; private set; } = PlayerSpeed.Normal;
     public LevelDifficulty levelDifficulty { get; private set; } = LevelDifficulty.Easy;
 
     public PlayerHorPos playerHorPos { get; private set; } = PlayerHorPos.Middle;
@@ -18,10 +17,10 @@ public class GameManager : MonoBehaviour
     private float dificultyTimeSum = 0;
     public float timeForEachDificulty = 60;
 
-    public float speedPeriode = 1.2f;
-    private float defaultSpeedPeriode = 0;
-    public bool playerIsInCloud { get; private set; } = false;
-    public float whaleUpDownVel = 1.5f;
+    //public float speedPeriode = 1.2f;
+    //private float defaultSpeedPeriode = 0;
+    //public bool playerIsInCloud { get; private set; } = false;
+    //public float whaleUpDownVel = 1.5f;
     public GameObject menuhandler;
 
     public int statsFish { get; private set; } = 0;
@@ -50,7 +49,6 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        defaultSpeedPeriode = speedPeriode;
     }
 
     public void setupOnStart()
@@ -63,7 +61,6 @@ public class GameManager : MonoBehaviour
         statsHarpune  = 0;
         statsRainCloud  = 0;
         statsSunnCloud  = 0;
-        Debug.Log(GameManager.Instance.IsGameWon);
     }
 
     public void exitToMainMenu()
@@ -74,14 +71,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-
-        time0Sum += Time.deltaTime;
-        if (time0Sum >= speedPeriode)
-        {
-            playerSpeed = PlayerSpeed.Normal;
-            playerIsInCloud = false;
-            time0Sum = 0;
-        }
         
         if(whaleInArea == WhaleArea.Near && currentWhaleInArea != WhaleArea.Near)
         {
@@ -109,31 +98,6 @@ public class GameManager : MonoBehaviour
 
         dificultyTimeSum += Time.deltaTime;
         setLevelDificulty(dificultyTimeSum);
-    }
-
-    public void PlayerGotSlower(bool isHarpune, PlayerSpeed speed = PlayerSpeed.Slower)
-    {
-        if (isHarpune)
-        {
-            speedPeriode = defaultSpeedPeriode;
-            //Debug.Log("slower by harpune");
-        } else
-        {
-            speedPeriode = 0.3f;
-            //Debug.Log("slower by cloud");
-            playerIsInCloud = true;
-        }
-
-        playerSpeed = speed;
-        time0Sum = 0;
-    }
-
-    public void PlayerGotFaster(PlayerSpeed speed = PlayerSpeed.Faster)
-    {
-        
-        speedPeriode = defaultSpeedPeriode;
-        playerSpeed = speed;
-        time0Sum = 0;
     }
 
     public void setStatsFor(string stat)
@@ -200,69 +164,6 @@ public class GameManager : MonoBehaviour
 }
 
 
-public enum PlayerSpeed
-{
-    Slower,
-    SunSlower,
-    HarpuneSlower,
-    Normal,
-    Faster
-
-}
-
-
-// extension für enum: PlayerSpeed
-static class PlayerSpeedMethods
-{
-
-    public static float GetSpeed(this PlayerSpeed p1)
-    {
-        switch (p1)
-        {
-            case PlayerSpeed.Slower:
-                return 0.8f; // 0.5
-            case PlayerSpeed.SunSlower:
-                return 0.2f;
-            case PlayerSpeed.HarpuneSlower:
-                return 1.5f;
-            case PlayerSpeed.Normal:
-                return 0.0f;
-            case PlayerSpeed.Faster:
-                if( GameManager.Instance.levelDifficulty == LevelDifficulty.Hard)
-                {
-                    return -1.3f;
-                }
-                return -1f;
-            default:
-                return 0.0f;
-
-        }
-    }
-
-    public static float GetVerticalSpeedMultiplier(this PlayerSpeed p1)
-    {
-        switch (p1)
-        {
-            case PlayerSpeed.Slower:
-                return 0.5f; // 0.5
-            case PlayerSpeed.SunSlower:
-                return 0.8f;
-            case PlayerSpeed.HarpuneSlower:
-                return 0.3f;
-            case PlayerSpeed.Normal:
-                return 1f;
-            case PlayerSpeed.Faster:
-                if (GameManager.Instance.levelDifficulty == LevelDifficulty.Hard)
-                {
-                    return 1.8f;
-                }
-                return 1.5f;
-            default:
-                return 1f;
-
-        }
-    }
-}
 
 public enum PlayerHorPos
 {

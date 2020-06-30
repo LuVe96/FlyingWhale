@@ -6,7 +6,7 @@ public class WaleMovement_2 : MonoBehaviour
 {
 
     public float turnVelocty = 35;
-    public float waleVelocity;
+    private float waleHoizontalVelocity;
     public GameObject redZone;
     ////public Transform hunter;
 
@@ -24,8 +24,7 @@ public class WaleMovement_2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        waleVelocity = GameManager.Instance.whaleUpDownVel / 1f;
-
+     
         animator = GetComponent<Animator>();
        
         AudioSource[] audios = GetComponents<AudioSource>();
@@ -38,7 +37,8 @@ public class WaleMovement_2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float velMulti = GameManager.Instance.playerSpeed.GetVerticalSpeedMultiplier();
+        waleHoizontalVelocity = MovementManager.Instance.realWhaleUpDownVel / 1f;
+
         // horizontal Movement
         if (Input.GetKeyDown(KeyCode.W) || isUpPressed)
         {
@@ -52,12 +52,12 @@ public class WaleMovement_2 : MonoBehaviour
             {
                 if(transform.localPosition.y <= 7.8)
                 {
-                    transform.position += new Vector3(0, waleVelocity * velMulti * Time.deltaTime, 0);
+                    transform.position += new Vector3(0, waleHoizontalVelocity * Time.deltaTime, 0);
                 }   
             }
             if (GameManager.Instance.playerHorPos == PlayerHorPos.Bottom)
             {
-                transform.position += new Vector3(0, waleVelocity * velMulti * Time.deltaTime, 0);
+                transform.position += new Vector3(0, waleHoizontalVelocity * Time.deltaTime, 0);
                 if (transform.localPosition.y >= 0)
                 {
                     GameManager.Instance.setPlayerHozPos(PlayerHorPos.Middle);
@@ -86,12 +86,12 @@ public class WaleMovement_2 : MonoBehaviour
             {
                 if (transform.localPosition.y >= -7.8)
                 {
-                    transform.position += new Vector3(0, -waleVelocity * velMulti * Time.deltaTime, 0);
+                    transform.position += new Vector3(0, -waleHoizontalVelocity  * Time.deltaTime, 0);
                 } 
             }
             if (GameManager.Instance.playerHorPos == PlayerHorPos.Top)
             {
-                transform.position += new Vector3(0, -waleVelocity * velMulti * Time.deltaTime, 0);
+                transform.position += new Vector3(0, -waleHoizontalVelocity * Time.deltaTime, 0);
                 if (transform.localPosition.y <= 0)
                 {
                     GameManager.Instance.setPlayerHozPos(PlayerHorPos.Middle);
@@ -123,14 +123,14 @@ public class WaleMovement_2 : MonoBehaviour
         }
          
         // vertical movement with limit in the end
-        if (transform.localPosition.x <= 14 || !(GameManager.Instance.playerSpeed == PlayerSpeed.Faster))
+        if (transform.localPosition.x <= 14 || !(MovementManager.Instance.realWhaleSpeed < 0))
         {   
-            transform.position += new Vector3(-GameManager.Instance.playerSpeed.GetSpeed() * Time.deltaTime, 0, 0);
+            transform.position += new Vector3(-MovementManager.Instance.realWhaleSpeed * Time.deltaTime, 0, 0);
         }
         
 
         //Animations
-        if(GameManager.Instance.playerSpeed == PlayerSpeed.Faster)
+        if(MovementManager.Instance.speedFish == PlayerSpeed.Faster)
         {
             animator.speed = 2f;
         }
@@ -169,7 +169,7 @@ public class WaleMovement_2 : MonoBehaviour
         {
             //hunter.transform.position += new Vector3(1.5f, 0, 0);
             GameManager.Instance.setStatsFor("statsHarpune");
-            GameManager.Instance.PlayerGotSlower(true, PlayerSpeed.HarpuneSlower);
+            MovementManager.Instance.PlayerGotSlower(true, PlayerSpeed.HarpuneSlower);
             whaleshot.Play();
             Destroy(collision.gameObject);
             
@@ -183,7 +183,7 @@ public class WaleMovement_2 : MonoBehaviour
         if (collision.gameObject.tag == "fish")
         {
             GameManager.Instance.setStatsFor("statsFish");
-            GameManager.Instance.PlayerGotFaster();
+            MovementManager.Instance.PlayerGotFaster();
             Destroy(collision.gameObject);
             fish.Play();
         }
@@ -214,12 +214,12 @@ public class WaleMovement_2 : MonoBehaviour
     {
         if (collision.gameObject.tag == "rainCloud")
         {
-            GameManager.Instance.PlayerGotSlower(false);
+            MovementManager.Instance.PlayerGotSlower(false);
         }
 
         if (collision.gameObject.tag == "sunnyCloud")
         {
-            GameManager.Instance.PlayerGotSlower(false, PlayerSpeed.SunSlower);
+            MovementManager.Instance.PlayerGotSlower(false, PlayerSpeed.SunSlower);
         }
     }
 }

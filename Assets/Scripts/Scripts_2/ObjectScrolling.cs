@@ -4,72 +4,72 @@ using UnityEngine;
 
 public class ObjectScrolling : MonoBehaviour
 {
-    public float speed = -1.5f;
-    public float waleVelocity = 1f;
-    //public Transform hunters;
+    //public float speed = -1.5f;
+    //public float waleVelocity = 1f;
+    ////public Transform hunters;
 
-    private Rigidbody2D rBody;
+    //private Rigidbody2D rBody;
 
-    private bool isUpPressed = false;
-    private bool isDownPressed = false;
+    //private bool isUpPressed = false;
+    //private bool isDownPressed = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        rBody = this.GetComponent<Rigidbody2D>();
-        rBody.velocity = new Vector2(speed, 0f);
-    }
+    //// Start is called before the first frame update
+    //void Start()
+    //{
+    //    rBody = this.GetComponent<Rigidbody2D>();
+    //    rBody.velocity = new Vector2(speed, 0f);
+    //}
 
-    // Update is called once per frame
-    void Update()
-    {
+    //// Update is called once per frame
+    //void Update()
+    //{
         
-        if ((Input.GetKeyDown(KeyCode.W) || isUpPressed) && transform.localPosition.y >= -5 )
-        {
-            transform.position += new Vector3(0, -waleVelocity * Time.deltaTime, 0);
-            //hunters.position -= new Vector3(0, -waleVelocity * Time.deltaTime, 0);
-            isUpPressed = true;
-        }
+    //    if ((Input.GetKeyDown(KeyCode.W) || isUpPressed) && transform.localPosition.y >= -5 )
+    //    {
+    //        transform.position += new Vector3(0, -waleVelocity * Time.deltaTime, 0);
+    //        //hunters.position -= new Vector3(0, -waleVelocity * Time.deltaTime, 0);
+    //        isUpPressed = true;
+    //    }
 
-        if (Input.GetKeyUp(KeyCode.W))
-        {
-            isUpPressed = false;
-        }
+    //    if (Input.GetKeyUp(KeyCode.W))
+    //    {
+    //        isUpPressed = false;
+    //    }
 
-        if (Input.GetKeyDown(KeyCode.S) || isDownPressed)
-        {
-            transform.position += new Vector3(0, waleVelocity * Time.deltaTime, 0);
-            //hunters.position -= new Vector3(0, waleVelocity * Time.deltaTime, 0);
-            isDownPressed = true;
-        }
+    //    if (Input.GetKeyDown(KeyCode.S) || isDownPressed)
+    //    {
+    //        transform.position += new Vector3(0, waleVelocity * Time.deltaTime, 0);
+    //        //hunters.position -= new Vector3(0, waleVelocity * Time.deltaTime, 0);
+    //        isDownPressed = true;
+    //    }
 
-        if (Input.GetKeyUp(KeyCode.S))
-        {
-            isDownPressed = false;
-        }
+    //    if (Input.GetKeyUp(KeyCode.S))
+    //    {
+    //        isDownPressed = false;
+    //    }
 
-        //this.transform.position += new Vector3(speed * Time.deltaTime, 0f, 0f);
+    //    //this.transform.position += new Vector3(speed * Time.deltaTime, 0f, 0f);
 
-        //PlayerSpeed ps = PlayerSpeed.Slower;
-        //if (GameManager.Instance.playerSpeed  == ps )
-        //{
-        //    transform.position += new Vector3(ps.GetSpeed() * Time.deltaTime, 0, 0);
-        //}
+    //    //PlayerSpeed ps = PlayerSpeed.Slower;
+    //    //if (GameManager.Instance.playerSpeed  == ps )
+    //    //{
+    //    //    transform.position += new Vector3(ps.GetSpeed() * Time.deltaTime, 0, 0);
+    //    //}
 
-        //PlayerSpeed psSun = PlayerSpeed.SunSlower;
-        //if (GameManager.Instance.playerSpeed == psSun)
-        //{
-        //    transform.position += new Vector3(psSun.GetSpeed() * Time.deltaTime, 0, 0);
-        //}
+    //    //PlayerSpeed psSun = PlayerSpeed.SunSlower;
+    //    //if (GameManager.Instance.playerSpeed == psSun)
+    //    //{
+    //    //    transform.position += new Vector3(psSun.GetSpeed() * Time.deltaTime, 0, 0);
+    //    //}
 
-        //PlayerSpeed psFast = PlayerSpeed.Faster;
-        //if (GameManager.Instance.playerSpeed == psFast)
-        //{
-        //    transform.position += new Vector3(psFast.GetSpeed() * Time.deltaTime, 0, 0);
-        //}
+    //    //PlayerSpeed psFast = PlayerSpeed.Faster;
+    //    //if (GameManager.Instance.playerSpeed == psFast)
+    //    //{
+    //    //    transform.position += new Vector3(psFast.GetSpeed() * Time.deltaTime, 0, 0);
+    //    //}
 
-        transform.position += new Vector3(GameManager.Instance.playerSpeed.GetSpeed() * Time.deltaTime, 0, 0);
-    }
+    //    transform.position += new Vector3(GameManager.Instance.playerSpeed.GetSpeed() * Time.deltaTime, 0, 0);
+    //}
 
 
 }
