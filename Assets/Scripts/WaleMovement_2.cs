@@ -171,6 +171,8 @@ public class WaleMovement_2 : MonoBehaviour
             GameManager.Instance.setStatsFor("statsHarpune");
             MovementManager.Instance.PlayerGotSlower(true, PlayerSpeed.HarpuneSlower);
             whaleshot.Play();
+            GameObject.Find("HurtScreen").GetComponent<HurtScreenHandler>().showHurtScreen();
+
             Destroy(collision.gameObject);
             
         }
