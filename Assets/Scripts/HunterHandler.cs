@@ -15,7 +15,7 @@ public class HunterHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        phase = HunterSpawnPhase.End;
     }
 
     // Update is called once per frame
@@ -52,7 +52,6 @@ public class HunterHandler : MonoBehaviour
 
     void OnPhaseSpawn()
     {
-        Debug.Log("spawn");
         for (int i = 0; i < transform.childCount; i++)
         {
             if (transform.GetChild(i).gameObject.tag == "whaleHunter" || transform.GetChild(i).gameObject.tag == "whaleHunterSpecial")

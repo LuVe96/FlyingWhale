@@ -932,9 +932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeForEachDificulty: 30
   menuhandler: {fileID: 2036471291}
-  clipNear: {fileID: 8300000, guid: a8c3ac6fa61cda94781f1246fa422744, type: 3}
   clipMiddle: {fileID: 8300000, guid: 8f0a586152e638741b1d73b04951a91d, type: 3}
-  clipAway: {fileID: 8300000, guid: 3ee40c4487ac6fa489a94b3cde5b12d6, type: 3}
 --- !u!4 &452749609
 Transform:
   m_ObjectHideFlags: 0
