@@ -31,9 +31,9 @@ public class GameManager : MonoBehaviour
     private AudioSource backgroundAudio;
     private WhaleArea whaleInArea  = WhaleArea.Middle;
     private WhaleArea currentWhaleInArea;
-    public AudioClip clipNear;
+    //public AudioClip clipNear;
     public AudioClip clipMiddle;
-    public AudioClip clipAway;
+    //public AudioClip clipAway;
 
     private float time0Sum = 0;
 
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);  // the Singelton Obj get not deleted when change szene
+            //DontDestroyOnLoad(gameObject);  // the Singelton Obj get not deleted when change szene
         }
         else
         {
@@ -56,6 +56,10 @@ public class GameManager : MonoBehaviour
         backgroundAudio.Play();
         IsGameOver  = false;
         IsGameWon = false;
+
+        levelDifficulty = LevelDifficulty.Easy;
+        playerHorPos = PlayerHorPos.Middle;
+        dificultyTimeSum = 0;
 
         statsFish = 0;
         statsHarpune  = 0;
@@ -72,29 +76,29 @@ public class GameManager : MonoBehaviour
     void Update()
     { 
         
-        if(whaleInArea == WhaleArea.Near && currentWhaleInArea != WhaleArea.Near)
-        {
-            backgroundAudio.Pause();
-            backgroundAudio.clip = clipNear;
-            currentWhaleInArea = WhaleArea.Near;
-            backgroundAudio.Play();
-            Debug.Log("Near");
-        }
-        else if (whaleInArea == WhaleArea.Away && currentWhaleInArea != WhaleArea.Away)
-        {
-            backgroundAudio.Pause();
-            backgroundAudio.clip = clipAway;
-            currentWhaleInArea = WhaleArea.Away;
-            backgroundAudio.Play();
-        }
-        else if (whaleInArea == WhaleArea.Middle && currentWhaleInArea != WhaleArea.Middle)
-        {
-            Debug.Log("Middle");
-            backgroundAudio.Pause();
-            backgroundAudio.clip = clipMiddle;
-            currentWhaleInArea = WhaleArea.Middle;
-            backgroundAudio.Play();
-        }
+        //if(whaleInArea == WhaleArea.Near && currentWhaleInArea != WhaleArea.Near)
+        //{
+        //    backgroundAudio.Pause();
+        //    backgroundAudio.clip = clipNear;
+        //    currentWhaleInArea = WhaleArea.Near;
+        //    backgroundAudio.Play();
+        //    Debug.Log("Near");
+        //}
+        //else if (whaleInArea == WhaleArea.Away && currentWhaleInArea != WhaleArea.Away)
+        //{
+        //    backgroundAudio.Pause();
+        //    backgroundAudio.clip = clipAway;
+        //    currentWhaleInArea = WhaleArea.Away;
+        //    backgroundAudio.Play();
+        //}
+        //else if (whaleInArea == WhaleArea.Middle && currentWhaleInArea != WhaleArea.Middle)
+        //{
+        //    Debug.Log("Middle");
+        //    backgroundAudio.Pause();
+        //    backgroundAudio.clip = clipMiddle;
+        //    currentWhaleInArea = WhaleArea.Middle;
+        //    backgroundAudio.Play();
+        //}
 
         dificultyTimeSum += Time.deltaTime;
         setLevelDificulty(dificultyTimeSum);

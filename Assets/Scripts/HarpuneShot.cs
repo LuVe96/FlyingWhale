@@ -7,13 +7,14 @@ public class HarpuneShot : MonoBehaviour
 
     private Transform wale;
     public float velocity;
-    public float timeDeletion = 2;
+    public float timeDeletion = 4;
     private Vector3 direction;
 
     private bool isShooting = false;
     private float timeSum = 0;
 
     private AudioSource shot;
+    private bool whaleHitten = false;
 
     private void Awake()
     {
@@ -25,6 +26,16 @@ public class HarpuneShot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (whaleHitten)
+        {
+            timeSum += Time.deltaTime;
+            if (timeSum >= timeDeletion)
+            {
+                ResetShot();
+            }
+            return;
+        }
+
         if (isShooting)
         {
             
@@ -72,5 +83,10 @@ public class HarpuneShot : MonoBehaviour
         timeSum = 0;
         isShooting = false;
         Destroy(gameObject);
+    }
+
+    public void WhaleHitten()
+    {
+        whaleHitten = true;
     }
 }

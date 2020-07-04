@@ -171,8 +171,18 @@ public class WaleMovement_2 : MonoBehaviour
             GameManager.Instance.setStatsFor("statsHarpune");
             MovementManager.Instance.PlayerGotSlower(true, PlayerSpeed.HarpuneSlower);
             whaleshot.Play();
-            Destroy(collision.gameObject);
-            
+            GameObject.Find("HurtScreen").GetComponent<HurtScreenHandler>().showHurtScreen();
+
+            // when harpune hits, it stucks in whale
+            collision.transform.parent = gameObject.transform;
+            collision.GetComponent<ObjectScrolling_2>().enabled = false;
+            collision.GetComponent<HarpuneShot>().WhaleHitten();
+            collision.GetComponent<BoxCollider2D>().enabled = false;
+            Vector3 dif = collision.transform.position - transform.position;
+            collision.transform.position -= dif * 0.4f;
+
+            //Destroy(collision.gameObject);
+
         }
 
         if (collision.gameObject.tag == "netz" || collision.gameObject.tag == "harpune(Clone)")
