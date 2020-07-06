@@ -56,11 +56,15 @@ public class HarpuneShot : MonoBehaviour
         
     }
 
-    public void Shot(float adjustRefY)
+    public void Shot(float adjustRefY, bool spreading = false)
     {
         shot.Play();
         //random position near wale
         float randomNumber = Random.Range(-0.8f, 0.8f);
+        if (spreading)
+        {
+            randomNumber = Random.Range(-3f, 3f);
+        }
         //Transform modWale = wale;
         //modWale.position += new Vector3(0.2f, randomNumber, 0);
         Vector3 pos = wale.position + new Vector3(1f, adjustRefY + randomNumber, 0);

@@ -73,7 +73,7 @@ public class HarpuneCreater : MonoBehaviour
             newHarpune.transform.position = shotPointHunter.transform.position;
             newHarpune.transform.localScale *= 1.3f;
             HarpuneShot hp = newHarpune.GetComponent<HarpuneShot>();
-            hp.Shot(0);
+            hp.Shot(0, true);
         }
         shotPointHunter.GetComponent<Animator>().SetTrigger("ExplosionTrigger");
         shotType = ShotType.None;

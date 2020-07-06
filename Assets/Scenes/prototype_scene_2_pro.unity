@@ -930,7 +930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d7b02b454c19224d84c2c9a875c0d72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeForEachDificulty: 30
+  timeForEachDificulty: 15
   menuhandler: {fileID: 2036471291}
   clipMiddle: {fileID: 8300000, guid: 8f0a586152e638741b1d73b04951a91d, type: 3}
 --- !u!4 &452749609
@@ -4281,6 +4281,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referenz: {fileID: 653525931}
+  startTiles: {fileID: 7243988291570218569, guid: 6094066ac763c294a839dc71b3548e61,
+    type: 3}
   easyTiles: {fileID: 2860259121243560196, guid: 169dde79c62da9e42a4411501d54cf12,
     type: 3}
   normalTiles: {fileID: 2686907516084879360, guid: 84476cc74db936d438d065ff4c0cd037,
