@@ -39,6 +39,21 @@ public class WaleMovement_2 : MonoBehaviour
     {
         waleHoizontalVelocity = MovementManager.Instance.realWhaleUpDownVel / 1f;
 
+        if(GameManager.Instance.IsGameOver || GameManager.Instance.IsGameWon) //disable all audio when game over ore won
+        {
+            whaleshot.enabled = false;
+            rainCloud.enabled = false;
+            sunnyCloud.enabled = false;
+            fish.enabled = false;
+        }
+        else
+        {
+            whaleshot.enabled = true;
+            rainCloud.enabled = true;
+            sunnyCloud.enabled = true;
+            fish.enabled = true;
+        }
+
         // horizontal Movement
         if (Input.GetKeyDown(KeyCode.W) || isUpPressed)
         {
