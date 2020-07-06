@@ -7,7 +7,7 @@ public class HarpuneShot : MonoBehaviour
 
     private Transform wale;
     public float velocity;
-    public float timeDeletion = 4;
+    public float timeDeletion = 6;
     private Vector3 direction;
 
     private bool isShooting = false;
@@ -26,9 +26,9 @@ public class HarpuneShot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timeSum += Time.deltaTime;
         if (whaleHitten)
-        {
-            timeSum += Time.deltaTime;
+        {      
             if (timeSum >= timeDeletion)
             {
                 ResetShot();
@@ -40,8 +40,6 @@ public class HarpuneShot : MonoBehaviour
         {
             
             transform.position += direction * velocity * Time.deltaTime;
-            timeSum += Time.deltaTime;
-
             if (timeSum >= timeDeletion)
             {
                 ResetShot();
@@ -80,6 +78,7 @@ public class HarpuneShot : MonoBehaviour
 
     private void ResetShot()
     {
+
         timeSum = 0;
         isShooting = false;
         Destroy(gameObject);

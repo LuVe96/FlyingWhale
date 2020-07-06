@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 0.4
-  timeDeletion: 3
+  timeDeletion: 6
 --- !u!61 &4697856327707861336
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -370,4 +370,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  waleVelocity: 1
+  useHorizontalVelosity: 1

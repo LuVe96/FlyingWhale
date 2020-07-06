@@ -21,6 +21,7 @@ public class WaleMovement_2 : MonoBehaviour
 
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -138,7 +139,7 @@ public class WaleMovement_2 : MonoBehaviour
         }
          
         // vertical movement with limit in the end
-        if (transform.localPosition.x <= 14 || !(MovementManager.Instance.realWhaleSpeed < 0))
+        if (transform.localPosition.x <= 12.5f || !(MovementManager.Instance.realWhaleSpeed < 0))
         {   
             transform.position += new Vector3(-MovementManager.Instance.realWhaleSpeed * Time.deltaTime, 0, 0);
         }
