@@ -6,6 +6,7 @@ public class TilesGenerator : MonoBehaviour
 {
 
     public Transform referenz;
+    public GameObject startTiles;
     public GameObject easyTiles;
     public GameObject normalTiles;
     public GameObject hardTiles;
@@ -23,7 +24,7 @@ public class TilesGenerator : MonoBehaviour
         numNormalTiles = normalTiles.transform.childCount;
         numHardTiles = hardTiles.transform.childCount;
         numEndTiles = endTiles.transform.childCount;
-        createTile(numEasyTiles, easyTiles);
+        createTile(startTiles.transform.childCount, startTiles, false);
     }
 
     // Update is called once per frame
@@ -54,11 +55,18 @@ public class TilesGenerator : MonoBehaviour
 
     }
 
-    void createTile(int numTiles, GameObject TilesSet)
+    void createTile(int numTiles, GameObject TilesSet, bool ran_y = true)
     {
         int num = Random.Range(0, numTiles - 1);
-        float randomY = Random.Range(-5, 5);
+        float randomY = 0;
+        float x = 0;
+        if (ran_y)  
+        {
+           randomY = Random.Range(-5, 5);
+             x = 30;
+
+        }
         GameObject obj = Instantiate(TilesSet.transform.GetChild(num).gameObject);
-        obj.transform.position = new Vector3(30, randomY + referenz.position.y, 0);
+        obj.transform.position = new Vector3(x, randomY + referenz.position.y, 0);
     }
 }
