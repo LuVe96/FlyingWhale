@@ -69,3 +69,6 @@ TagManager:
   - name: Whalehunter
     uniqueID: 2581223347
     locked: 0
+  - name: canvas
+    uniqueID: 2627187657
+    locked: 0
