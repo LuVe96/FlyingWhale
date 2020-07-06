@@ -120,6 +120,10 @@ static class PlayerSpeedMethods
             case PlayerSpeed.Slower:
                 return 0.8f; // 0.5
             case PlayerSpeed.SunSlower:
+                if (GameManager.Instance.levelDifficulty == LevelDifficulty.End)
+                {
+                    return -0.2f;
+                }
                 return 0.2f;
             case PlayerSpeed.HarpuneSlower:
                 return 1.2f;

@@ -45,7 +45,7 @@ public class MenuHandler : MonoBehaviour
     void Update()
     {
       
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !GameManager.Instance.IsGameWon && !GameManager.Instance.IsGameOver)
         {
             if (gameIsPaused)
             {
