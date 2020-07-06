@@ -65,7 +65,6 @@
     <Compile Include="Assets\Collider2D Optimization\EdgeColliderOptimizer.cs" />
     <Compile Include="Assets\Collider2D Optimization\PolygonColliderOptimizer.cs" />
     <Compile Include="Assets\Collider2D Optimization\ShapeOptimizationHelper.cs" />
-    <Compile Include="Assets\HurtScreenHandler.cs" />
     <Compile Include="Assets\Scripts\AnimationCollisionsHandler.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GeneratedTile.cs" />
@@ -74,6 +73,7 @@
     <Compile Include="Assets\Scripts\HarpuneShot.cs" />
     <Compile Include="Assets\Scripts\HunterHandler.cs" />
     <Compile Include="Assets\Scripts\HunterMovement.cs" />
+    <Compile Include="Assets\Scripts\HurtScreenHandler.cs" />
     <Compile Include="Assets\Scripts\LevelDifficultyEnum.cs" />
     <Compile Include="Assets\Scripts\LevelGenerator.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
