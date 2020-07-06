@@ -63,3 +63,9 @@ TagManager:
   - name: Front
     uniqueID: 308975571
     locked: 0
+  - name: HunterNet
+    uniqueID: 485295455
+    locked: 0
+  - name: Whalehunter
+    uniqueID: 2581223347
+    locked: 0
