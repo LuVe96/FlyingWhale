@@ -930,7 +930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d7b02b454c19224d84c2c9a875c0d72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeForEachDificulty: 15
+  timeForEachDificulty: 120
   menuhandler: {fileID: 2036471291}
   clipMiddle: {fileID: 8300000, guid: 8f0a586152e638741b1d73b04951a91d, type: 3}
 --- !u!4 &452749609
