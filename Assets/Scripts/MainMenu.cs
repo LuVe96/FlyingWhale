@@ -29,6 +29,11 @@ public class MainMenu : MonoBehaviour
            
             FadeIn(FadeInOpt.Menu);
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            timeSum = (float) clip.length;
+        }
     }
 
     public void ExitGame()
