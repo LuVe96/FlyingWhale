@@ -63,7 +63,7 @@ public class TilesGenerator : MonoBehaviour
         if (ran_y)  
         {
            randomY = Random.Range(-5, 5);
-             x = 30;
+             x = 32;
 
         }
         GameObject obj = Instantiate(TilesSet.transform.GetChild(num).gameObject);
