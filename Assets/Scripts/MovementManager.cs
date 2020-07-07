@@ -118,13 +118,13 @@ static class PlayerSpeedMethods
         switch (p1)
         {
             case PlayerSpeed.Slower:
-                return 0.8f; // 0.5
+                return 0.7f; // 0.5
             case PlayerSpeed.SunSlower:
                 if (GameManager.Instance.levelDifficulty == LevelDifficulty.End)
                 {
                     return -0.2f;
                 }
-                return 0.2f;
+                return 0.1f;
             case PlayerSpeed.HarpuneSlower:
                 return 1.2f;
             case PlayerSpeed.Normal:
@@ -146,9 +146,9 @@ static class PlayerSpeedMethods
         switch (p1)
         {
             case PlayerSpeed.Slower:
-                return 0.5f; // 0.5
+                return 0.8f; // 0.5
             case PlayerSpeed.SunSlower:
-                return 0.8f;
+                return 1f;
             case PlayerSpeed.HarpuneSlower:
                 return 0.4f;
             case PlayerSpeed.Normal:

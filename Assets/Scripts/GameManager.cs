@@ -118,7 +118,7 @@ public class GameManager : MonoBehaviour
 
     void setLevelDificulty(float timeSum)
     {
-        if (timeSum >= timeForEachDificulty * 3)
+        if (timeSum >= (timeForEachDificulty * 2) + timeForEachDificulty/2)
         {
             levelDifficulty = LevelDifficulty.End;
         }
