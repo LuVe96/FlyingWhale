@@ -11,6 +11,9 @@ public class MainMenu : MonoBehaviour
     public UnityEngine.Video.VideoClip clip;
     private float timeSum = 0;
 
+    public AudioSource startSound;
+    public AudioSource loopSound;
+
     private void Start()
     {
         main.GetComponent<UnityEngine.Video.VideoPlayer>().clip = clip;
@@ -22,6 +25,13 @@ public class MainMenu : MonoBehaviour
 
     private void Update()
     {
+
+        if (!startSound.isPlaying && !loopSound.isPlaying)
+        {
+            loopSound.Play();
+            Debug.Log("Play loop");
+        }
+
         timeSum += Time.deltaTime;
 
         if (timeSum >= clip.length)
