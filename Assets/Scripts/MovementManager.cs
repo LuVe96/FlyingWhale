@@ -146,7 +146,7 @@ static class PlayerSpeedMethods
         switch (p1)
         {
             case PlayerSpeed.Slower:
-                return 0.8f; // 0.5
+                return 0.75f; // 0.5
             case PlayerSpeed.SunSlower:
                 return 1f;
             case PlayerSpeed.HarpuneSlower:

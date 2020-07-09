@@ -61,13 +61,20 @@ public class HarpuneCreater : MonoBehaviour
         }  
         else if(shotType == ShotType.FourSchrot)
         {
-            ShotSchrot();
+            if(GameManager.Instance.levelDifficulty == LevelDifficulty.Hard)
+            {
+                ShotSchrot(4);
+            } else
+            {
+                ShotSchrot(5);
+            }
+
         }
     }
 
-    void ShotSchrot()
+    void ShotSchrot(int count)
     {
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < count; i++)
         {
             GameObject newHarpune = Instantiate(Harpune);
             newHarpune.transform.position = shotPointHunter.transform.position;
