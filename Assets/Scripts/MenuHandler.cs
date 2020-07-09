@@ -14,6 +14,10 @@ public class MenuHandler : MonoBehaviour
     public Sprite wonImage;
     public UnityEngine.Video.VideoClip wonClip;
     public UnityEngine.Video.VideoClip gameOverClip;
+    public AudioClip wonSound;
+    public AudioClip gameoverSound;
+    private AudioSource audioSource;
+
     private UnityEngine.Video.VideoPlayer videoPlayer;
 
     private GameObject statsText_f;
@@ -29,6 +33,7 @@ public class MenuHandler : MonoBehaviour
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         videoPlayer = clipMenu.GetComponent<UnityEngine.Video.VideoPlayer>();
         statsText_h = menu.transform.GetChild(0).gameObject;
         statsText_f = menu.transform.GetChild(1).gameObject;
@@ -131,6 +136,8 @@ public class MenuHandler : MonoBehaviour
             clipMenu.SetActive(true);
             videoPlayer.clip = gameOverClip;
             videoPlayer.Play();
+            audioSource.clip = gameoverSound;
+            audioSource.Play();
             isClipStarted = true;
             
         }
@@ -153,6 +160,8 @@ public class MenuHandler : MonoBehaviour
             clipMenu.SetActive(true);
             videoPlayer.clip = wonClip;
             videoPlayer.Play();
+            audioSource.clip = wonSound;
+            audioSource.Play();
             isClipStarted = true;
         }
 
