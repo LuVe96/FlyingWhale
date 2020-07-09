@@ -233,6 +233,11 @@ public class WaleMovement_2 : MonoBehaviour
             sunnyCloud.Play();
         }
 
+        if(collision.name == "GoalEntry")
+        {
+            GameManager.Instance.setGoalEntered(true);
+        }
+
        
     }
 

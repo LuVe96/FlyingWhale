@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     private float dificultyTimeSum = 0;
     public float timeForEachDificulty = 60;
 
+    public bool goalEntered  { get; private set; } = false;
+
     //public float speedPeriode = 1.2f;
     //private float defaultSpeedPeriode = 0;
     //public bool playerIsInCloud { get; private set; } = false;
@@ -56,6 +58,7 @@ public class GameManager : MonoBehaviour
         backgroundAudio.Play();
         IsGameOver  = false;
         IsGameWon = false;
+        goalEntered = false;
 
         levelDifficulty = LevelDifficulty.Easy;
         playerHorPos = PlayerHorPos.Middle;
@@ -164,6 +167,11 @@ public class GameManager : MonoBehaviour
     public void setCreateNextTile(bool create)
     {
         createNextTile = create;
+    }
+
+    public void setGoalEntered(bool en)
+    {
+        goalEntered = en;
     }
 }
 

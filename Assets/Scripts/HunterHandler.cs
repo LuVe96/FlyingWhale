@@ -26,6 +26,13 @@ public class HunterHandler : MonoBehaviour
         {
             phase = HunterSpawnPhase.End;
             currentDifficulty = (GameManager.Instance.levelDifficulty);
+            Debug.Log(currentDifficulty);
+        }
+        else if (GameManager.Instance.goalEntered)
+        {
+            phase = HunterSpawnPhase.End;
+            currentDifficulty = (GameManager.Instance.levelDifficulty);
+            Debug.Log(currentDifficulty);
         }
 
 
@@ -33,13 +40,16 @@ public class HunterHandler : MonoBehaviour
         {
             case HunterSpawnPhase.End:
                 if (OnPhaseEnd())
-                {
-                    phase = HunterSpawnPhase.Spawn;
+                {              
+                   phase = HunterSpawnPhase.Spawn;                
                 }
                 break;
             case HunterSpawnPhase.Spawn:
                 OnPhaseSpawn();
-                phase = HunterSpawnPhase.Start;
+                if (GameManager.Instance.levelDifficulty != LevelDifficulty.End)
+                {
+                    phase = HunterSpawnPhase.Start;
+                }
                 break;
             case HunterSpawnPhase.Start:
                 if (OnPhaseStart())
@@ -65,6 +75,7 @@ public class HunterHandler : MonoBehaviour
             case LevelDifficulty.Easy: spawnhunters(new GameObject[1] { normalHunter }); break;
             case LevelDifficulty.Normal: spawnhunters(new GameObject[1] { specialHunter }); break;
             case LevelDifficulty.Hard: spawnhunters(new GameObject[2] { normalHunter, specialHunter }); break;
+            default: break;
 
         }
 
