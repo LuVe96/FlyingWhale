@@ -35,9 +35,9 @@ public class HurtScreenHandler : MonoBehaviour
 
     bool FadeIn()
     {       
-         if (gameObject.GetComponent<Image>().color.a < 0.3f)
+         if (gameObject.GetComponent<Image>().color.a < 0.5f)
         {
-            gameObject.GetComponent<Image>().color += new Color(0, 0, 0, 1f * Time.deltaTime);
+            gameObject.GetComponent<Image>().color += new Color(0, 0, 0, 1.5f * Time.deltaTime);
             return false;
         }
         started = false;
@@ -48,7 +48,7 @@ public class HurtScreenHandler : MonoBehaviour
     {
         if (gameObject.GetComponent<Image>().color.a > 0f)
         {
-            gameObject.GetComponent<Image>().color += new Color(0, 0, 0, -0.1f * Time.deltaTime);
+            gameObject.GetComponent<Image>().color += new Color(0, 0, 0, -0.3f * Time.deltaTime);
             return;
         }
         fadedIn = false;
