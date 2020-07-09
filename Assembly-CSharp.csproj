@@ -62,7 +62,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AspectRatioSetter.cs" />
     <Compile Include="Assets\Collider2D Optimization\EdgeColliderOptimizer.cs" />
     <Compile Include="Assets\Collider2D Optimization\PolygonColliderOptimizer.cs" />
     <Compile Include="Assets\Collider2D Optimization\ShapeOptimizationHelper.cs" />
@@ -89,6 +88,7 @@
     <Compile Include="Assets\Scripts\TwoPartBgRepeater.cs" />
     <Compile Include="Assets\Scripts\VideoCustomizer.cs" />
     <Compile Include="Assets\Scripts\WaleMovement_2.cs" />
+    <Compile Include="Assets\Sprites\AspectRatioSetter.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Sprites\Menu\Satisfy\LICENSE.txt" />
