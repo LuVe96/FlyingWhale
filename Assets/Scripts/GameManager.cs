@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public float timeForEachDificulty = 60;
 
     public bool goalEntered  { get; private set; } = false;
+    public float progressBarAmount { get; private set; } = 0;
 
     //public float speedPeriode = 1.2f;
     //private float defaultSpeedPeriode = 0;
@@ -105,6 +106,7 @@ public class GameManager : MonoBehaviour
 
         dificultyTimeSum += Time.deltaTime;
         setLevelDificulty(dificultyTimeSum);
+        progressBarAmount = dificultyTimeSum / ((timeForEachDificulty * 2) + timeForEachDificulty / 4 * 3);
     }
 
     public void setStatsFor(string stat)
