@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - AnimationCollisionsHandler
+    - AspectRatioSetter
     - Collider2DOptimization.PolygonColliderOptimizer
     - GameManager
     - GeneratedTile
@@ -10,6 +11,7 @@ ScriptsOnlyBuild:
     - HarpuneShot
     - HunterHandler
     - HunterMovement
+    - HurtScreenHandler
     - LevelGenerator
     - MainMenu
     - MenuHandler
@@ -86,41 +88,43 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11192}
+      Script: {instanceID: 11194}
     - Class: 114
-      Script: {instanceID: 11480}
+      Script: {instanceID: 11394}
     - Class: 114
-      Script: {instanceID: 11484}
+      Script: {instanceID: 11486}
     - Class: 114
-      Script: {instanceID: 11536}
+      Script: {instanceID: 11490}
     - Class: 114
-      Script: {instanceID: 12030}
+      Script: {instanceID: 11542}
     - Class: 114
-      Script: {instanceID: 12170}
+      Script: {instanceID: 12036}
     - Class: 114
-      Script: {instanceID: 12204}
+      Script: {instanceID: 12176}
     - Class: 114
-      Script: {instanceID: 12256}
+      Script: {instanceID: 12210}
     - Class: 114
-      Script: {instanceID: 12558}
+      Script: {instanceID: 12262}
     - Class: 114
-      Script: {instanceID: 12914}
+      Script: {instanceID: 12564}
     - Class: 114
-      Script: {instanceID: 13264}
+      Script: {instanceID: 12920}
     - Class: 114
-      Script: {instanceID: 13282}
+      Script: {instanceID: 13270}
     - Class: 114
-      Script: {instanceID: 13536}
+      Script: {instanceID: 13288}
     - Class: 114
-      Script: {instanceID: 13684}
+      Script: {instanceID: 13542}
     - Class: 114
-      Script: {instanceID: 13964}
+      Script: {instanceID: 13690}
     - Class: 114
-      Script: {instanceID: 14276}
+      Script: {instanceID: 13970}
     - Class: 114
-      Script: {instanceID: 14308}
+      Script: {instanceID: 14282}
     - Class: 114
-      Script: {instanceID: 14328}
+      Script: {instanceID: 14314}
+    - Class: 114
+      Script: {instanceID: 14334}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -179,55 +183,59 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11192}
+      Script: {instanceID: 11194}
     - Class: 114
-      Script: {instanceID: 11480}
+      Script: {instanceID: 11222}
+    - Class: 114
+      Script: {instanceID: 11394}
     - Class: 114
       Script: {instanceID: 11486}
     - Class: 114
-      Script: {instanceID: 11536}
+      Script: {instanceID: 11492}
     - Class: 114
-      Script: {instanceID: 11570}
+      Script: {instanceID: 11542}
     - Class: 114
-      Script: {instanceID: 11586}
+      Script: {instanceID: 11576}
     - Class: 114
-      Script: {instanceID: 11880}
+      Script: {instanceID: 11592}
     - Class: 114
-      Script: {instanceID: 11970}
+      Script: {instanceID: 11886}
     - Class: 114
-      Script: {instanceID: 12170}
+      Script: {instanceID: 11976}
     - Class: 114
-      Script: {instanceID: 12204}
+      Script: {instanceID: 12176}
     - Class: 114
-      Script: {instanceID: 12662}
+      Script: {instanceID: 12210}
     - Class: 114
-      Script: {instanceID: 12680}
+      Script: {instanceID: 12668}
     - Class: 114
-      Script: {instanceID: 12780}
+      Script: {instanceID: 12686}
     - Class: 114
-      Script: {instanceID: 12914}
+      Script: {instanceID: 12786}
     - Class: 114
-      Script: {instanceID: 12946}
+      Script: {instanceID: 12920}
     - Class: 114
-      Script: {instanceID: 12992}
+      Script: {instanceID: 12952}
     - Class: 114
-      Script: {instanceID: 13178}
+      Script: {instanceID: 12998}
     - Class: 114
-      Script: {instanceID: 13442}
+      Script: {instanceID: 13184}
     - Class: 114
-      Script: {instanceID: 13670}
+      Script: {instanceID: 13448}
     - Class: 114
-      Script: {instanceID: 13684}
+      Script: {instanceID: 13676}
     - Class: 114
-      Script: {instanceID: 13946}
+      Script: {instanceID: 13690}
     - Class: 114
-      Script: {instanceID: 14044}
+      Script: {instanceID: 13952}
     - Class: 114
-      Script: {instanceID: 14064}
+      Script: {instanceID: 14050}
     - Class: 114
-      Script: {instanceID: 14254}
+      Script: {instanceID: 14070}
     - Class: 114
-      Script: {instanceID: 14308}
+      Script: {instanceID: 14260}
+    - Class: 114
+      Script: {instanceID: 14314}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -261,6 +269,12 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HurtScreenHandler
+  - hash:
+      serializedVersion: 2
       Hash: c42672c997f8be6b1aa86a927ebea785
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -289,6 +303,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayerQuitHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AspectRatioSetter
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -465,7 +485,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 7d5b30cba8ea2a358e1f5adf0d74a541
+      Hash: f64a0fe789a05e11564b981daceaef06
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -555,7 +575,7 @@ ScriptsOnlyBuild:
     className: SpriteSkinEntity
   - hash:
       serializedVersion: 2
-      Hash: 56970be4135c47c717c46f585d949714
+      Hash: 71b3fb7953afb514d6957f5892f19d8a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TilesGenerator
@@ -693,7 +713,7 @@ ScriptsOnlyBuild:
     className: PolygonColliderOptimizer
   - hash:
       serializedVersion: 2
-      Hash: e7b6a2e4771b72d57f33f7b4405b6dc0
+      Hash: 6893488af4abf4659731785fa2630ffc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainMenu
@@ -747,7 +767,7 @@ ScriptsOnlyBuild:
     className: WaleMovement
   - hash:
       serializedVersion: 2
-      Hash: 04d955b65656f3b6a355c9a37f988bca
+      Hash: f8f00efc2eef5a468c7ede40ea07630f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MenuHandler
@@ -875,4 +895,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Main_menu_scene.unity
   - Assets/Scenes/prototype_scene_2_pro.unity
-  playerPath: D:/Dokumente_D/MedienDesign/6_Semester/GameDesign/Wal_Game/Mac_Build.app
+  playerPath: D:/Dokumente_D/MedienDesign/6_Semester/GameDesign/Wal_Game/OverWhaleMing_mac.app

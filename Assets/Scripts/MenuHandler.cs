@@ -8,6 +8,7 @@ public class MenuHandler : MonoBehaviour
     static bool gameIsPaused = false;
     public GameObject menu;
     public GameObject clipMenu;
+    public GameObject progressBar;
 
     public Sprite gameOverImage;
     public Sprite pauseImage;
@@ -130,7 +131,7 @@ public class MenuHandler : MonoBehaviour
 
     public void showGameOverMenu()
     {
-       
+        progressBar.SetActive(false);
         if (!isClipStarted)
         {
             clipMenu.SetActive(true);
@@ -155,6 +156,7 @@ public class MenuHandler : MonoBehaviour
 
     public void showWonMenu()
     {
+        progressBar.SetActive(false);
         if (!isClipStarted)
         {
             clipMenu.SetActive(true);
@@ -185,6 +187,7 @@ public class MenuHandler : MonoBehaviour
         Time.timeScale = 1f;
         gameIsPaused = false;
         isClipStarted = false;
+        progressBar.SetActive(true);
     }
 
     void PauseGame(bool showInstant)
@@ -193,6 +196,7 @@ public class MenuHandler : MonoBehaviour
         menu.GetComponent<Image>().sprite = pauseImage;
         createStatsText();
         menu.SetActive(true);
+        progressBar.SetActive(false);
         if (showInstant)
         {
             FadeIn(FadeInOpt.Instant);
